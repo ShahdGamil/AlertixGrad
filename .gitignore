@@ -12,6 +12,7 @@ test-make b3.v1-data2.yolov8.zip
 
 # Submodules/other repos
 AletrixGrad/
+App Grad/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
