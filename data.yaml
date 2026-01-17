@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['Customer-Bagpack', 'Product', 'Product-Picked', 'Shopping-Cart', 'normal', 'theft']
+
+roboflow:
+  workspace: grad-lnwh2
+  project: cc-tv-footage-annotation-b8-lcysc-b1-wutkr
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/grad-lnwh2/cc-tv-footage-annotation-b8-lcysc-b1-wutkr/dataset/2
