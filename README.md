@@ -1,3 +1,494 @@
+# Retail Theft Detection with YOLOv8s
+
+A comprehensive computer vision pipeline for retail surveillance theft detection using **YOLOv8 Small (YOLOv8s)**.
+
+## Project Overview
+
+This project provides a complete end-to-end pipeline for:
+- **Dataset validation and cleaning** for YOLO format annotations
+- **Class imbalance handling** through targeted augmentation
+- **YOLOv8s model training** optimized for retail surveillance
+- **High recall theft detection** as the primary objective
+
+### Target Application
+Real-time retail theft detection from CCTV surveillance footage.
+
+### Dataset Classes
+| Class ID | Class Name | Description |
+|----------|------------|-------------|
+| 0 | Customer-Bagpack | Customer carrying a backpack |
+| 1 | Product | Store products on shelves |
+| 2 | Product-Picked | Products being handled |
+| 3 | Shopping-Cart | Shopping carts in frame |
+| 4 | normal | Normal shopping behavior |
+| 5 | **theft** | Theft/suspicious activity (priority class) |
+
+---
+
+## Directory Structure
+
+```
+AletrixGrad/
+├── cc-tv-footage-annotation-b8-lcysc-b1-2/   # Original dataset
+│   ├── train/
+│   │   ├── images/
+│   │   └── labels/
+│   ├── valid/
+│   │   ├── images/
+│   │   └── labels/
+│   ├── test/
+│   │   ├── images/
+│   │   └── labels/
+│   └── data.yaml
+├── notebooks/                    # Jupyter notebooks (main pipeline)
+│   ├── 01_dataset_validation.ipynb
+│   ├── 02_dataset_cleaning.ipynb
+│   ├── 03_dataset_analysis.ipynb
+│   ├── 04_dataset_balancing.ipynb
+│   ├── 05_dataset_splitting.ipynb
+│   ├── 06_preprocessing_pipeline.ipynb
+│   ├── 07_training_preparation.ipynb
+│   └── 08_training_evaluation.ipynb
+├── configs/                      # Configuration files
+│   ├── data.yaml
+│   └── training_config.yaml
+├── outputs/                      # Reports and logs
+├── visualizations/               # Generated charts and images
+├── runs/                         # Training outputs
+├── dataset_cleaned/              # Cleaned dataset (generated)
+├── dataset_augmented/            # Augmented dataset (generated)
+├── train_yolov8s.py              # Training script
+└── README.md                     # This file
+```
+
+---
+
+## Quick Start
+
+### Prerequisites
+
+1. **Python 3.8+**
+2. **NVIDIA GPU with CUDA** (strongly recommended)
+3. **PyTorch with CUDA support**
+
+### Installation
+
+```bash
+# Create virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# or
+venv\Scripts\activate  # Windows
+
+# Install dependencies
+pip install ultralytics torch torchvision opencv-python pillow numpy pandas matplotlib seaborn albumentations tqdm pyyaml scikit-learn imagehash jupyter
+
+# Verify GPU
+python -c "import torch; print(f'CUDA available: {torch.cuda.is_available()}')"
+```
+
+### Running the Pipeline
+
+**Option 1: Execute notebooks sequentially**
+```bash
+cd notebooks
+jupyter notebook
+# Run notebooks 01 through 08 in order
+```
+
+**Option 2: Use the training script directly**
+```bash
+python train_yolov8s.py
+```
+
+**Option 3: Command line training**
+```bash
+yolo detect train data=configs/data.yaml model=yolov8s.pt epochs=100 batch=16 imgsz=640 device=0
+```
+
+---
+
+## Notebook Execution Order
+
+Execute notebooks in the following sequence:
+
+### 1. Dataset Validation (`01_dataset_validation.ipynb`)
+**Purpose:** Verify dataset integrity and identify issues
+
+**What it does:**
+- Validates YOLO label format (class_id x_center y_center width height)
+- Detects missing/corrupt images
+- Validates bounding box normalization (values in [0, 1])
+- Identifies orphan labels (labels without images)
+- Generates validation report with statistics
+
+**Key outputs:**
+- `outputs/validation_report.json`
+- `visualizations/validation_*.png`
+
+---
+
+### 2. Dataset Cleaning (`02_dataset_cleaning.ipynb`)
+**Purpose:** Fix issues and remove problematic samples
+
+**What it does:**
+- Removes corrupt/unreadable images
+- Fixes invalid bounding box coordinates
+- Removes duplicate images (perceptual hashing)
+- Creates empty labels for images without annotations
+- Removes orphan labels
+
+**Key outputs:**
+- `dataset_cleaned/` - Cleaned dataset
+- `outputs/cleaning_report.json`
+- `logs/cleaning_log.json`
+
+---
+
+### 3. Dataset Analysis (`03_dataset_analysis.ipynb`)
+**Purpose:** Comprehensive dataset visualization and insights
+
+**What it does:**
+- Class distribution analysis
+- Bounding box size/aspect ratio distributions
+- Image resolution analysis
+- Annotations per image statistics
+- Sample image visualization with bboxes
+
+**Key outputs:**
+- `visualizations/class_distribution.png`
+- `visualizations/bbox_distribution.png`
+- `outputs/dataset_analysis_report.json`
+
+---
+
+### 4. Dataset Balancing (`04_dataset_balancing.ipynb`)
+**Purpose:** Address class imbalance through augmentation
+
+**What it does:**
+- Analyzes class imbalance severity
+- Applies targeted augmentation to minority classes:
+  - **theft** (3x augmentation)
+  - **Shopping-Cart** (2x augmentation)
+- Uses realistic surveillance augmentations:
+  - Horizontal flip
+  - Brightness/contrast adjustment
+  - Motion blur
+  - Gaussian noise
+  - Color jitter
+
+**Key outputs:**
+- `dataset_augmented/` - Balanced dataset
+- `outputs/augmentation_report.json`
+- `visualizations/augmentation_*.png`
+
+---
+
+### 5. Dataset Splitting (`05_dataset_splitting.ipynb`)
+**Purpose:** Verify/create stratified train/val/test splits
+
+**What it does:**
+- Analyzes current split ratios (target: 70/20/10)
+- Checks class distribution consistency across splits
+- Detects data leakage (overlapping images)
+- Optional: Creates new stratified split
+
+**Key outputs:**
+- `outputs/split_statistics_report.json`
+- `visualizations/split_distribution.png`
+
+---
+
+### 6. Preprocessing Pipeline (`06_preprocessing_pipeline.ipynb`)
+**Purpose:** Prepare images for optimal training
+
+**What it does:**
+- Auto-orients images using EXIF metadata
+- Resizes to 640x640 with letterboxing
+- Preserves aspect ratio with padding
+- Transforms bounding box coordinates
+
+**Note:** YOLOv8 handles preprocessing internally, so this step is optional but useful for dataset caching.
+
+**Key outputs:**
+- `dataset_processed/` - Preprocessed dataset
+- `outputs/preprocessing_report.json`
+
+---
+
+### 7. Training Preparation (`07_training_preparation.ipynb`)
+**Purpose:** Configure everything for YOLOv8s training
+
+**What it does:**
+- GPU verification and diagnostics
+- Calculates optimal batch size based on GPU memory
+- Computes class weights for imbalanced data
+- Generates optimized `data.yaml`
+- Creates training configuration file
+- Generates training script
+
+**Key outputs:**
+- `configs/data.yaml`
+- `configs/training_config.yaml`
+- `train_yolov8s.py`
+- `outputs/training_recommendations.txt`
+
+---
+
+### 8. Training & Evaluation (`08_training_evaluation.ipynb`)
+**Purpose:** Train YOLOv8s and evaluate performance
+
+**What it does:**
+- Verifies GPU availability (CRITICAL)
+- Trains YOLOv8s with optimized hyperparameters
+- Monitors training progress
+- Evaluates on validation and test sets
+- Generates per-class metrics (focus on theft recall)
+- Exports model (ONNX, TorchScript)
+
+**Key outputs:**
+- `runs/retail_theft_yolov8s/weights/best.pt`
+- `runs/retail_theft_yolov8s/results.csv`
+- `visualizations/training_curves.png`
+- `outputs/training_final_report.json`
+
+---
+
+## GPU Requirements
+
+### Minimum Requirements
+- **GPU:** NVIDIA GPU with 6GB+ VRAM
+- **CUDA:** 11.8 or 12.x
+- **cuDNN:** 8.x+
+
+### Recommended Setup
+- **GPU:** NVIDIA RTX 3080/4080 or better (16GB+ VRAM)
+- **Batch size:** 16-32 (adjust based on VRAM)
+
+### Verify GPU Setup
+```python
+import torch
+print(f"CUDA available: {torch.cuda.is_available()}")
+print(f"GPU: {torch.cuda.get_device_name(0)}")
+print(f"CUDA version: {torch.version.cuda}")
+```
+
+### Install PyTorch with CUDA
+```bash
+# CUDA 11.8
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+
+# CUDA 12.1
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+```
+
+---
+
+## Training Configuration
+
+### Hyperparameters (Optimized for Retail Surveillance)
+
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| Model | YOLOv8s | Small model, good balance |
+| Image Size | 640x640 | Standard YOLO size |
+| Epochs | 100 | With early stopping |
+| Batch Size | 8-32 | Based on GPU memory |
+| Optimizer | AdamW | Better generalization |
+| Learning Rate | 0.01 | With cosine decay |
+| Warmup Epochs | 3 | Gradual learning |
+| Early Stopping | 30 epochs | Prevent overfitting |
+
+### Augmentation Settings (Surveillance-Specific)
+
+| Augmentation | Value | Rationale |
+|--------------|-------|-----------|
+| Mosaic | 1.0 | Effective for detection |
+| Horizontal Flip | 0.5 | Realistic for retail |
+| HSV Adjustments | Moderate | Lighting variations |
+| **Rotation** | **0.0** | Fixed cameras |
+| **Shear** | **0.0** | Unrealistic distortion |
+| **Perspective** | **0.0** | Fixed viewpoint |
+| **Vertical Flip** | **0.0** | Unrealistic |
+
+---
+
+## Maximizing Theft Class Recall
+
+### Strategies Implemented
+
+1. **Targeted Augmentation**
+   - 3x augmentation multiplier for theft samples
+   - Realistic augmentations (brightness, blur, noise)
+
+2. **Class Weights**
+   - Calculated using sqrt-inverse-frequency
+   - Higher weight for minority classes
+
+3. **Training Optimizations**
+   - Higher classification loss weight
+   - Early stopping monitors mAP
+
+### Inference Recommendations
+
+For maximum theft recall:
+```python
+# Use lower confidence threshold
+model.predict(source=images, conf=0.25)  # Instead of 0.5
+
+# For real-time monitoring, prioritize recall
+model.predict(source=stream, conf=0.2, iou=0.4)
+```
+
+---
+
+## Model Export & Deployment
+
+### Export Trained Model
+
+```python
+from ultralytics import YOLO
+
+model = YOLO('runs/retail_theft_yolov8s/weights/best.pt')
+
+# Export to ONNX (recommended for production)
+model.export(format='onnx', imgsz=640)
+
+# Export to TensorRT (fastest inference on NVIDIA)
+model.export(format='engine', imgsz=640)
+
+# Export for edge devices
+model.export(format='tflite', imgsz=640)
+```
+
+### Inference Example
+
+```python
+from ultralytics import YOLO
+
+# Load trained model
+model = YOLO('runs/retail_theft_yolov8s/weights/best.pt')
+
+# Single image
+results = model.predict('path/to/image.jpg', conf=0.25)
+
+# Video stream
+results = model.predict('rtsp://camera_url', stream=True)
+
+# Process results
+for r in results:
+    boxes = r.boxes  # Bounding boxes
+    for box in boxes:
+        cls = int(box.cls[0])
+        conf = float(box.conf[0])
+        if cls == 5:  # theft class
+            print(f"THEFT DETECTED! Confidence: {conf:.2f}")
+```
+
+---
+
+## Troubleshooting
+
+### Common Issues
+
+#### 1. "No GPU detected"
+```bash
+# Check NVIDIA driver
+nvidia-smi
+
+# Reinstall PyTorch with CUDA
+pip uninstall torch torchvision
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+```
+
+#### 2. "Out of Memory (OOM)"
+```python
+# Reduce batch size
+model.train(batch=4, ...)
+
+# Disable caching
+model.train(cache=False, ...)
+
+# Use smaller image size
+model.train(imgsz=512, ...)
+```
+
+#### 3. "Low Theft Recall"
+- Increase augmentation multiplier for theft class
+- Lower confidence threshold during inference
+- Fine-tune with higher `cls` loss weight
+- Add more theft samples if available
+
+#### 4. "Training Too Slow"
+```python
+# Verify GPU usage
+print(f"Device: {torch.cuda.current_device()}")
+
+# Enable caching
+model.train(cache=True, ...)
+
+# Enable AMP
+model.train(amp=True, ...)
+```
+
+---
+
+## Results Interpretation
+
+### Key Metrics
+
+| Metric | Description | Target |
+|--------|-------------|--------|
+| mAP@0.5 | Mean AP at IoU 0.5 | > 0.7 |
+| mAP@0.5:0.95 | Mean AP across IoUs | > 0.5 |
+| **Theft Recall** | Detection rate for theft | **> 0.8** |
+| Precision | Accuracy of detections | > 0.7 |
+
+### Understanding Results
+
+- **High Recall, Low Precision:** Many false positives (adjust conf threshold up)
+- **Low Recall, High Precision:** Missing detections (adjust conf threshold down)
+- **Low mAP:** Model underfitting (train longer, increase data augmentation)
+
+---
+
+## File Outputs Summary
+
+| File | Location | Description |
+|------|----------|-------------|
+| `best.pt` | `runs/retail_theft_yolov8s/weights/` | Best trained model |
+| `results.csv` | `runs/retail_theft_yolov8s/` | Training metrics per epoch |
+| `data.yaml` | `configs/` | Dataset configuration |
+| `validation_report.json` | `outputs/` | Dataset validation results |
+| `training_final_report.json` | `outputs/` | Final training summary |
+| `training_curves.png` | `visualizations/` | Loss and metric plots |
+
+---
+
+## Citation
+
+If you use this pipeline in your research, please cite:
+
+```bibtex
+@misc{retail_theft_yolov8,
+  title={Retail Theft Detection with YOLOv8s},
+  author={AletrixGrad Project},
+  year={2024},
+  howpublished={GitHub Repository}
+}
+```
+
+---
+
+## License
+
+This project uses:
+- **YOLOv8** by Ultralytics (AGPL-3.0)
+- **Dataset** from Roboflow (CC BY 4.0)
+
+
+
+*Generated for the AletrixGrad Retail Theft Detection Project*
 # AletrixGrad: Retail Theft Detection using YOLOv8s
 
 A deep learning pipeline for detecting retail theft in CCTV surveillance footage using YOLOv8s object detection.
@@ -277,4 +768,3 @@ for r in results:
 ## Author
 
 **Shahd Gamil**
-
