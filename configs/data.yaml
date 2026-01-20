@@ -1,0 +1,12 @@
+path: c:\Users\shaho\OneDrive - Nile University\Desktop\AletrixGrad\dataset_augmented
+train: train/images
+val: valid/images
+test: test/images
+nc: 6
+names:
+- Customer-Bagpack
+- Product
+- Product-Picked
+- Shopping-Cart
+- normal
+- theft
