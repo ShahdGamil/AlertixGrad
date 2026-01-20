@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-01-19T03:16:16.754256",
+  "dataset": {
+    "path": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\dataset_augmented",
+    "total_images": 2803,
+    "class_distribution": {
+      "Product-Picked": 778,
+      "normal": 4626,
+      "Product": 793,
+      "Customer-Bagpack": 605,
+      "Shopping-Cart": 137,
+      "theft": 396
+    }
+  },
+  "gpu_info": {
+    "cuda_available": true,
+    "cuda_version": "13.0",
+    "cudnn_version": "91200",
+    "gpu_count": 1,
+    "gpus": [
+      {
+        "id": 0,
+        "name": "NVIDIA GeForce GTX 1650",
+        "total_memory_gb": 4.0,
+        "compute_capability": "7.5",
+        "multi_processor_count": 14,
+        "memory_allocated_gb": 0.0,
+        "memory_reserved_gb": 0.0
+      }
+    ],
+    "recommended_batch_size": 2
+  },
+  "training_config": {
+    "model": "yolov8s.pt",
+    "data": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\configs\\data.yaml",
+    "imgsz": 640,
+    "epochs": 100,
+    "batch": 2,
+    "patience": 30,
+    "optimizer": "AdamW",
+    "lr0": 0.01,
+    "lrf": 0.01,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3,
+    "warmup_momentum": 0.8,
+    "warmup_bias_lr": 0.1,
+    "box": 7.5,
+    "cls": 0.5,
+    "dfl": 1.5,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "degrees": 0.0,
+    "translate": 0.1,
+    "scale": 0.5,
+    "shear": 0.0,
+    "perspective": 0.0,
+    "flipud": 0.0,
+    "fliplr": 0.5,
+    "mosaic": 1.0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "device": 0,
+    "workers": 8,
+    "cache": true,
+    "amp": true,
+    "project": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\runs",
+    "name": "retail_theft_yolov8s",
+    "exist_ok": true,
+    "pretrained": true,
+    "verbose": true,
+    "seed": 42,
+    "val": true,
+    "plots": true,
+    "save": true,
+    "save_period": 10
+  },
+  "class_weights": {
+    "Product-Picked": 0.82,
+    "normal": 0.336,
+    "Product": 0.812,
+    "Customer-Bagpack": 0.93,
+    "Shopping-Cart": 1.953,
+    "theft": 1.149
+  },
+  "files_generated": [
+    "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\configs\\data.yaml",
+    "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\configs\\training_config.yaml",
+    "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\train_yolov8s.py"
+  ]
+}

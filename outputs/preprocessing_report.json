@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-01-19T03:15:29.994148",
+  "source_dataset": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\dataset_augmented",
+  "output_dataset": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\dataset_processed",
+  "target_size": 640,
+  "preprocessing_steps": [
+    "EXIF auto-orientation",
+    "Letterbox resize to 640x640",
+    "Aspect ratio preservation",
+    "Bounding box coordinate transformation"
+  ],
+  "statistics": {
+    "total_processed": 2803,
+    "successful": 2803,
+    "failed": 0,
+    "splits": {
+      "train": {
+        "processed": 2065,
+        "failed": 0,
+        "errors": []
+      },
+      "valid": {
+        "processed": 482,
+        "failed": 0,
+        "errors": []
+      },
+      "test": {
+        "processed": 256,
+        "failed": 0,
+        "errors": []
+      }
+    }
+  },
+  "verification": {
+    "total_images": 2803,
+    "total_labels": 2802
+  }
+}

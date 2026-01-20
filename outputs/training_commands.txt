@@ -1,0 +1,25 @@
+
+# Option 1: Run training script
+python "c:\Users\shaho\OneDrive - Nile University\Desktop\AletrixGrad\train_yolov8s.py"
+
+# Option 2: Train from command line (Ultralytics CLI)
+yolo detect train \
+    data="c:\Users\shaho\OneDrive - Nile University\Desktop\AletrixGrad\configs\data.yaml" \
+    model=yolov8s.pt \
+    epochs=100 \
+    batch=2 \
+    imgsz=640 \
+    device=0 \
+    project="c:\Users\shaho\OneDrive - Nile University\Desktop\AletrixGrad\runs" \
+    name=retail_theft_yolov8s
+
+# Option 3: Train in Python
+from ultralytics import YOLO
+model = YOLO('yolov8s.pt')
+model.train(data='c:\Users\shaho\OneDrive - Nile University\Desktop\AletrixGrad\configs\data.yaml', epochs=100, batch=2)
+
+# Validate trained model
+yolo detect val model=runs/retail_theft_yolov8s/weights/best.pt data="c:\Users\shaho\OneDrive - Nile University\Desktop\AletrixGrad\configs\data.yaml"
+
+# Run inference on test images
+yolo detect predict model=runs/retail_theft_yolov8s/weights/best.pt source="c:\Users\shaho\OneDrive - Nile University\Desktop\AletrixGrad\dataset_augmented/test/images"

@@ -1,0 +1,57 @@
+
+1. MODEL SELECTION
+   - Using YOLOv8s (small) for good balance of speed and accuracy
+   - For higher accuracy: try YOLOv8m or YOLOv8l
+   - For faster inference: use YOLOv8n
+
+2. IMAGE SIZE CONSIDERATIONS
+   - Current: 640x640 (standard)
+   - For small objects (products): consider 1280x1280
+   - Trade-off: larger size = better accuracy but slower training
+
+3. AUGMENTATION FOR SURVEILLANCE
+   - Enabled: Mosaic, horizontal flip, scale, HSV adjustments
+   - Disabled: Rotation, shear, perspective (unrealistic for fixed cameras)
+   - Consider: adding motion blur for realistic surveillance effects
+
+4. CLASS IMBALANCE HANDLING
+   - Theft class is underrepresented (396 samples)
+   - Strategies implemented:
+     a) Data augmentation on minority classes
+     b) Class weights calculated (theft weight: 1.149)
+   - Additional options:
+     a) Focal loss (increase gamma)
+     b) More aggressive augmentation on theft samples
+
+5. MAXIMIZING RECALL FOR THEFT CLASS
+   - Use lower confidence threshold during inference (0.25 instead of 0.5)
+   - Adjust cls_loss weight to emphasize classification
+   - Consider post-processing with class-specific NMS thresholds
+   - Fine-tune on theft-heavy subset after initial training
+
+6. TRANSFER LEARNING STRATEGY
+   - Start from yolov8s.pt (COCO pretrained)
+   - First 10 epochs: freeze backbone, train only head
+   - Remaining epochs: unfreeze all layers
+   - Alternative: use smaller lr for pretrained layers
+
+7. HARDWARE OPTIMIZATION
+   - Batch size: 2 (based on 4.0 GB GPU)
+   - Enable AMP (automatic mixed precision) for faster training
+   - Use cache=True for faster data loading
+   - Workers: 8 (adjust based on CPU cores)
+
+8. EARLY STOPPING
+   - Patience: 30 epochs (stop if no improvement)
+   - Monitor: mAP@0.5 and recall for theft class
+   - Save best model based on validation performance
+
+9. POST-TRAINING OPTIMIZATION
+   - Export to ONNX/TensorRT for faster inference
+   - Quantization (INT8) for edge deployment
+   - Test with various confidence thresholds
+
+10. RECOMMENDED TRAINING SCHEDULE
+    Phase 1: Initial training (50-100 epochs)
+    Phase 2: Fine-tune on hard examples (20-30 epochs)
+    Phase 3: Optimize for recall if needed (10-20 epochs)

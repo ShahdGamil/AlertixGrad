@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-01-19T18:35:54.643767",
+  "model": "YOLOv8s",
+  "dataset": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\dataset_augmented",
+  "training_config": {
+    "epochs": 100,
+    "batch_size": 2,
+    "image_size": 640,
+    "device": "0",
+    "early_stopping_patience": 30
+  },
+  "results": {
+    "save_dir": "C:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\runs\\retail_theft_yolov8s",
+    "best_model": "C:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\runs\\retail_theft_yolov8s\\weights\\best.pt"
+  },
+  "validation_metrics": {
+    "mAP50": 0.8426816001705127,
+    "mAP50_95": 0.6413309549024687,
+    "precision": 0.8370165363973836,
+    "recall": 0.7790005312689713
+  },
+  "test_metrics": {
+    "mAP50": 0.778641141726844,
+    "mAP50_95": 0.5764006050442921,
+    "precision": 0.7478155870082436,
+    "recall": 0.7475071833269434
+  },
+  "exports": {
+    "onnx": "C:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\runs\\retail_theft_yolov8s\\weights\\best.onnx",
+    "torchscript": "C:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\runs\\retail_theft_yolov8s\\weights\\best.torchscript"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-01-19T03:12:41.254278",
+  "source_dataset": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\dataset_cleaned",
+  "output_dataset": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\dataset_augmented",
+  "minority_classes": [
+    "Shopping-Cart",
+    "theft"
+  ],
+  "multipliers": {
+    "Shopping-Cart": 2,
+    "theft": 3
+  },
+  "statistics": {
+    "original_copied": 1314,
+    "augmented_created": 751,
+    "failed": 0
+  },
+  "original_distribution": {
+    "Product-Picked": 778,
+    "normal": 4626,
+    "Product": 793,
+    "Customer-Bagpack": 605,
+    "Shopping-Cart": 137,
+    "theft": 396
+  },
+  "augmented_distribution": {
+    "Product-Picked": 778,
+    "normal": 4626,
+    "Product": 793,
+    "Customer-Bagpack": 605,
+    "Shopping-Cart": 137,
+    "theft": 396
+  },
+  "comparison": [
+    {
+      "class_id": 0,
+      "class_name": "Customer-Bagpack",
+      "original": 605,
+      "augmented": 605,
+      "increase": 0,
+      "pct_increase": 0.0
+    },
+    {
+      "class_id": 1,
+      "class_name": "Product",
+      "original": 793,
+      "augmented": 793,
+      "increase": 0,
+      "pct_increase": 0.0
+    },
+    {
+      "class_id": 2,
+      "class_name": "Product-Picked",
+      "original": 778,
+      "augmented": 778,
+      "increase": 0,
+      "pct_increase": 0.0
+    },
+    {
+      "class_id": 3,
+      "class_name": "Shopping-Cart",
+      "original": 137,
+      "augmented": 137,
+      "increase": 0,
+      "pct_increase": 0.0
+    },
+    {
+      "class_id": 4,
+      "class_name": "normal",
+      "original": 4626,
+      "augmented": 4626,
+      "increase": 0,
+      "pct_increase": 0.0
+    },
+    {
+      "class_id": 5,
+      "class_name": "theft",
+      "original": 396,
+      "augmented": 396,
+      "increase": 0,
+      "pct_increase": 0.0
+    }
+  ]
+}

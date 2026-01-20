@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-01-18T21:55:53.078487",
+  "dataset_path": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\dataset_cleaned",
+  "overview": {
+    "total_images": 2052,
+    "total_annotations": 7335,
+    "avg_annotations_per_image": 3.57,
+    "num_classes": 6
+  },
+  "splits": {
+    "train": {
+      "num_images": 1314,
+      "num_annotations": 4726,
+      "percentage": 64.0
+    },
+    "valid": {
+      "num_images": 482,
+      "num_annotations": 1767,
+      "percentage": 23.5
+    },
+    "test": {
+      "num_images": 256,
+      "num_annotations": 842,
+      "percentage": 12.5
+    }
+  },
+  "class_distribution": {
+    "Product-Picked": 778,
+    "normal": 4626,
+    "Product": 793,
+    "Customer-Bagpack": 605,
+    "Shopping-Cart": 137,
+    "theft": 396
+  },
+  "class_imbalance": {
+    "majority_class": "normal",
+    "minority_class": "Shopping-Cart",
+    "imbalance_ratio": 33.77,
+    "severity": "CRITICAL"
+  },
+  "bbox_statistics": {
+    "area": {
+      "mean": 0.1104,
+      "std": 0.125,
+      "min": 0.0006,
+      "max": 0.7949
+    },
+    "aspect_ratio": {
+      "mean": 0.578,
+      "std": 0.289,
+      "min": 0.108,
+      "max": 2.516
+    }
+  },
+  "image_statistics": {
+    "width": {
+      "mean": 640.0,
+      "min": 640,
+      "max": 640
+    },
+    "height": {
+      "mean": 640.0,
+      "min": 640,
+      "max": 640
+    }
+  }
+}

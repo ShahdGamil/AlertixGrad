@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-01-19T03:13:16.622335",
+  "dataset_path": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\dataset_augmented",
+  "total_images": 2803,
+  "total_annotations": 7335,
+  "splits": {
+    "train": {
+      "num_images": 2065,
+      "num_labels": 2065,
+      "num_annotations": 4726,
+      "ratio": 0.737,
+      "class_distribution": {
+        "Product-Picked": 504,
+        "normal": 2963,
+        "Product": 515,
+        "Customer-Bagpack": 398,
+        "Shopping-Cart": 91,
+        "theft": 255
+      }
+    },
+    "valid": {
+      "num_images": 482,
+      "num_labels": 482,
+      "num_annotations": 1767,
+      "ratio": 0.172,
+      "class_distribution": {
+        "normal": 1114,
+        "theft": 87,
+        "Customer-Bagpack": 148,
+        "Product-Picked": 192,
+        "Product": 199,
+        "Shopping-Cart": 27
+      }
+    },
+    "test": {
+      "num_images": 256,
+      "num_labels": 256,
+      "num_annotations": 842,
+      "ratio": 0.091,
+      "class_distribution": {
+        "normal": 549,
+        "Customer-Bagpack": 59,
+        "Product-Picked": 82,
+        "theft": 54,
+        "Product": 79,
+        "Shopping-Cart": 19
+      }
+    }
+  },
+  "data_leakage_check": {
+    "train_valid_overlap": 0,
+    "train_test_overlap": 0,
+    "valid_test_overlap": 0,
+    "status": "PASS"
+  }
+}

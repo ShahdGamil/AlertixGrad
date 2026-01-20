@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-01-18T21:51:32.763321",
+  "dataset_path": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\cc-tv-footage-annotation-b8-lcysc-b1-2",
+  "splits": {
+    "train": {
+      "total_images": 2095,
+      "valid_images": 2095,
+      "corrupt_images": 0,
+      "missing_labels": 0,
+      "invalid_labels": 0,
+      "empty_labels": 1,
+      "total_annotations": 7076,
+      "class_distribution": {
+        "2": 742,
+        "4": 4449,
+        "1": 751,
+        "0": 543,
+        "3": 153,
+        "5": 438
+      },
+      "issues": []
+    },
+    "valid": {
+      "total_images": 600,
+      "valid_images": 600,
+      "corrupt_images": 0,
+      "missing_labels": 0,
+      "invalid_labels": 0,
+      "empty_labels": 0,
+      "total_annotations": 2097,
+      "class_distribution": {
+        "4": 1346,
+        "5": 104,
+        "0": 174,
+        "2": 215,
+        "1": 221,
+        "3": 37
+      },
+      "issues": []
+    },
+    "test": {
+      "total_images": 303,
+      "valid_images": 303,
+      "corrupt_images": 0,
+      "missing_labels": 0,
+      "invalid_labels": 0,
+      "empty_labels": 0,
+      "total_annotations": 974,
+      "class_distribution": {
+        "4": 648,
+        "0": 63,
+        "2": 94,
+        "5": 58,
+        "1": 89,
+        "3": 22
+      },
+      "issues": []
+    }
+  },
+  "summary": {
+    "total_images": 2998,
+    "valid_images": 2998,
+    "corrupt_images": 0,
+    "missing_labels": 0,
+    "invalid_labels": 0,
+    "empty_labels": 1,
+    "orphan_labels": 0,
+    "total_annotations": 10147,
+    "validation_pass_rate": 100.0
+  },
+  "class_distribution": {
+    "2": 1051,
+    "4": 6443,
+    "1": 1061,
+    "0": 780,
+    "3": 212,
+    "5": 600
+  },
+  "orphan_labels": [],
+  "all_issues": []
+}

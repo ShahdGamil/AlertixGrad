@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-01-18T21:53:35.884982",
+  "source": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\cc-tv-footage-annotation-b8-lcysc-b1-2",
+  "output": "c:\\Users\\shaho\\OneDrive - Nile University\\Desktop\\AletrixGrad\\dataset_cleaned",
+  "splits": {
+    "train": {
+      "total": 2095,
+      "cleaned": 1314,
+      "removed_corrupt": 0,
+      "removed_duplicates": 781,
+      "fixed_labels": 249
+    },
+    "valid": {
+      "total": 600,
+      "cleaned": 482,
+      "removed_corrupt": 0,
+      "removed_duplicates": 118,
+      "fixed_labels": 97
+    },
+    "test": {
+      "total": 303,
+      "cleaned": 256,
+      "removed_corrupt": 0,
+      "removed_duplicates": 47,
+      "fixed_labels": 44
+    }
+  },
+  "summary": {
+    "total_images": 2998,
+    "cleaned_images": 2052,
+    "removed_corrupt": 0,
+    "removed_duplicates": 946,
+    "fixed_labels": 390,
+    "removed_orphan_labels": 0,
+    "created_missing_labels": 0,
+    "fixed_bbox": 0,
+    "removed_invalid_bbox": 0
+  }
+}
