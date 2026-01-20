@@ -730,6 +730,33 @@ for r in results:
 
 5. **AMP Issues on GTX 1650**: NaN losses with mixed precision
    - **Solution**: Disabled AMP training
+======================================================================
+TRAINING AND EVALUATION COMPLETE
+======================================================================
+
+FINAL SUMMARY
+=============
+
+Model: YOLOv8s (Small)
+Dataset: dataset_augmented
+
+VALIDATION METRICS:
+  mAP@0.5:      0.8448
+  mAP@0.5:0.95: 0.6374
+  Precision:    0.8220
+  Recall:       0.8084
+
+TEST METRICS:
+  mAP@0.5:      0.7874
+  mAP@0.5:0.95: 0.5793
+  Precision:    0.7398
+  Recall:       0.7919
+
+MODEL FILES:
+  Best weights: C:\Users\shaho\OneDrive - Nile University\Desktop\AletrixGrad\runs\retail_theft_yolov8s\weights\best.pt
+  ONNX export:  C:\Users\shaho\OneDrive - Nile University\Desktop\AletrixGrad\runs\retail_theft_yolov8s\weights\best.onnx
+
+======================================================================
 
 ---
 
