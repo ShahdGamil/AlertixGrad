@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-01-18T13:34:30.051787",
+  "dataset_path": ".",
+  "summary": {
+    "total_images": 2578,
+    "total_annotations": 8834,
+    "average_annotations_per_image": 3.43,
+    "splits": {
+      "train": 1675,
+      "valid": 600,
+      "test": 303
+    }
+  },
+  "class_distribution": {
+    "Customer-Bagpack": 854,
+    "Product": 887,
+    "Product-Picked": 828,
+    "Shopping-Cart": 339,
+    "normal": 5047,
+    "theft": 879
+  },
+  "class_percentages": {
+    "Customer-Bagpack": 9.67,
+    "Product": 10.04,
+    "Product-Picked": 9.37,
+    "Shopping-Cart": 3.84,
+    "normal": 57.13,
+    "theft": 9.95
+  },
+  "bbox_statistics": {
+    "avg_width": 0.2074,
+    "avg_height": 0.4016,
+    "min_width": 0.0004,
+    "min_height": 0.0002,
+    "max_width": 0.7949,
+    "max_height": 1.0
+  },
+  "image_statistics": {
+    "resolutions": [
+      [
+        1920,
+        1080
+      ],
+      [
+        640,
+        358
+      ],
+      [
+        576,
+        360
+      ],
+      [
+        960,
+        540
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        640,
+        360
+      ],
+      [
+        320,
+        240
+      ]
+    ],
+    "most_common_resolution": [
+      1920,
+      1080
+    ]
+  },
+  "split_details": {
+    "train": {
+      "2": 519,
+      "4": 3053,
+      "1": 577,
+      "0": 617,
+      "3": 280,
+      "5": 717
+    },
+    "valid": {
+      "4": 1346,
+      "5": 104,
+      "0": 174,
+      "2": 215,
+      "1": 221,
+      "3": 37
+    },
+    "test": {
+      "4": 648,
+      "0": 63,
+      "2": 94,
+      "5": 58,
+      "1": 89,
+      "3": 22
+    }
+  },
+  "quality_assessment": {
+    "score": 90,
+    "rating": "Excellent",
+    "issues": [
+      "Significant class imbalance detected (ratio > 10:1)"
+    ]
+  },
+  "recommendations": [
+    "Use mosaic augmentation (enabled by default in YOLOv8)",
+    "Enable copy-paste augmentation for minority classes",
+    "Consider using EMA (Exponential Moving Average) for stable training",
+    "Monitor mAP@0.5 specifically for the Theft class during validation"
+  ]
+}

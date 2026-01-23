@@ -1,0 +1,39 @@
+{
+  "split_statistics": {
+    "train": {
+      "images": 1675,
+      "labels": 1675,
+      "matched": true
+    },
+    "valid": {
+      "images": 600,
+      "labels": 600,
+      "matched": true
+    },
+    "test": {
+      "images": 303,
+      "labels": 303,
+      "matched": true
+    }
+  },
+  "total_images": 2578,
+  "overlaps": [],
+  "bbox_validation": {
+    "train": {
+      "valid": 5764,
+      "invalid": 0,
+      "errors": []
+    },
+    "valid": {
+      "valid": 2097,
+      "invalid": 0,
+      "errors": []
+    },
+    "test": {
+      "valid": 974,
+      "invalid": 0,
+      "errors": []
+    }
+  },
+  "overall_status": "PASS"
+}

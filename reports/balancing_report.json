@@ -1,0 +1,38 @@
+{
+  "strategy": "augmentation",
+  "original_distribution": {
+    "Product-Picked": 405,
+    "normal": 2377,
+    "Product": 413,
+    "Customer-Bagpack": 330,
+    "Shopping-Cart": 60,
+    "theft": 151
+  },
+  "final_distribution": {
+    "Product-Picked": 519,
+    "normal": 3053,
+    "Product": 577,
+    "Customer-Bagpack": 617,
+    "Shopping-Cart": 280,
+    "theft": 717
+  },
+  "augmented_per_class": {
+    "Shopping-Cart": 180,
+    "theft": 453
+  },
+  "total_augmented": 633,
+  "class_weights": {
+    "Product-Picked": 1.8507,
+    "normal": 0.3146,
+    "Product": 1.6646,
+    "Customer-Bagpack": 1.5567,
+    "Shopping-Cart": 3.4304,
+    "theft": 1.3396
+  },
+  "recommendations": [
+    "High class imbalance detected. Consider using focal loss or class weights.",
+    "Shopping-Cart class is underrepresented. Consider collecting more data.",
+    "Use weighted loss with provided class weights for better minority class detection.",
+    "Enable mosaic augmentation during training for improved generalization."
+  ]
+}
