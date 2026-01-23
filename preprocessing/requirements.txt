@@ -1,0 +1,17 @@
+# Retail Theft Detection - Preprocessing Pipeline Requirements
+
+# Core dependencies
+numpy>=1.21.0
+Pillow>=9.0.0
+PyYAML>=6.0
+imagehash>=4.3.0
+
+# Visualization (optional but recommended)
+matplotlib>=3.5.0
+
+# YOLOv8 Training (install separately if needed)
+# ultralytics>=8.0.0
+
+# Optional: For GPU training
+# torch>=2.0.0
+# torchvision>=0.15.0
