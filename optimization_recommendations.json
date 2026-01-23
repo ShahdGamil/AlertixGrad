@@ -1,0 +1,82 @@
+{
+  "model_selection": {
+    "recommended": "yolov8n.pt",
+    "reason": "Nano model is optimal for CPU/limited GPU training",
+    "alternatives": {
+      "yolov8s.pt": "If GPU memory > 4GB, provides better accuracy",
+      "yolov8m.pt": "If GPU memory > 8GB, significantly better accuracy"
+    }
+  },
+  "image_size": {
+    "recommended": 640,
+    "cpu_alternative": 416,
+    "note": "Use 416 for faster CPU training, 640 for better small object detection"
+  },
+  "batch_size": {
+    "cpu": {
+      "batch": 4,
+      "reason": "Small batches prevent memory issues"
+    },
+    "gpu_4gb": {
+      "batch": 8,
+      "reason": "Safe for 4GB VRAM with YOLOv8n"
+    },
+    "gpu_8gb": {
+      "batch": 16,
+      "reason": "Optimal for 8GB VRAM"
+    },
+    "gpu_16gb+": {
+      "batch": 32,
+      "reason": "Maximum efficiency"
+    }
+  },
+  "learning_rate": {
+    "default": 0.001,
+    "fine_tuning": 0.0001,
+    "note": "Lower LR if training is unstable"
+  },
+  "class_imbalance_handling": {
+    "strategy": "weighted_loss",
+    "cls_weight": 1.0,
+    "focal_loss": {
+      "gamma": 2.0,
+      "note": "Helps with hard examples and minority classes"
+    },
+    "oversampling": "Applied to Theft and Shopping-Cart classes"
+  },
+  "augmentation_settings": {
+    "cpu_optimized": {
+      "mosaic": 0.5,
+      "mixup": 0.0,
+      "copy_paste": 0.0,
+      "note": "Reduced augmentation for faster training"
+    },
+    "gpu_full": {
+      "mosaic": 1.0,
+      "mixup": 0.15,
+      "copy_paste": 0.1,
+      "note": "Full augmentation for better generalization"
+    }
+  },
+  "early_stopping": {
+    "patience": 50,
+    "monitor": "val/mAP50",
+    "note": "Stop if no improvement for 50 epochs"
+  },
+  "transfer_learning": {
+    "strategy": "Full fine-tuning from COCO pretrained weights",
+    "freeze_backbone": false,
+    "note": "YOLOv8n.pt provides good initialization for retail objects"
+  },
+  "theft_detection_optimization": {
+    "conf_threshold": 0.25,
+    "iou_threshold": 0.45,
+    "note": "Lower confidence for high recall on theft detection"
+  },
+  "memory_optimization": {
+    "cache": "disk",
+    "workers": 2,
+    "pin_memory": false,
+    "note": "Disk caching saves RAM, essential for CPU training"
+  }
+}
