@@ -1,0 +1,22 @@
+{
+  "dataset_statistics": {
+    "total_images": 2095,
+    "total_annotations": 7076,
+    "class_distribution": {
+      "Product-Picked": 742,
+      "normal": 4449,
+      "Product": 751,
+      "Customer-Bagpack": 543,
+      "Shopping-Cart": 153,
+      "theft": 438
+    }
+  },
+  "bbox_statistics": {
+    "width_mean": 0.20747344542487126,
+    "width_std": 0.13488773469643228,
+    "height_mean": 0.40839243582240964,
+    "height_std": 0.23321374166638195,
+    "area_mean": 0.10467410214826336,
+    "area_std": 0.11485269936642789
+  }
+}

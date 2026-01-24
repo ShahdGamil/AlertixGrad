@@ -1,0 +1,258 @@
+# YOLO Ensemble Theft Detection Pipeline Configuration
+# Production-Ready Configuration for Retail Surveillance
+
+# Dataset Configuration
+dataset:
+  name: "retail_theft_detection"
+  input_path: "C:/Users/EMAD AWAD/Downloads/cc-tv-footage-annotation-b8-lcysc b1.v2-download_data.yolov8"
+  output_path: "data/processed"
+
+  # Pre-split dataset paths (from Roboflow)
+  train_path: "C:/Users/EMAD AWAD/Downloads/cc-tv-footage-annotation-b8-lcysc b1.v2-download_data.yolov8/train"
+  valid_path: "C:/Users/EMAD AWAD/Downloads/cc-tv-footage-annotation-b8-lcysc b1.v2-download_data.yolov8/valid"
+  test_path: "C:/Users/EMAD AWAD/Downloads/cc-tv-footage-annotation-b8-lcysc b1.v2-download_data.yolov8/test"
+
+  classes:
+    - "Customer-Bagpack"
+    - "Product"
+    - "Product-Picked"
+    - "Shopping-Cart"
+    - "normal"
+    - "theft"
+
+  # Priority class for high-recall optimization
+  priority_class: "theft"
+
+  # Minority classes requiring augmentation
+  minority_classes:
+    - "theft"
+    - "Shopping-Cart"
+
+# Validation Settings
+validation:
+  strict_mode: true
+  auto_fix: true
+  check_bbox_normalized: true
+  check_image_label_pairing: true
+  check_class_id_range: true
+  min_bbox_area: 0.0001  # Minimum normalized bbox area
+  max_bbox_coord: 1.0
+  min_bbox_coord: 0.0
+
+# Cleaning Settings
+cleaning:
+  remove_corrupt_images: true
+  remove_invalid_bboxes: true
+  remove_duplicates: true
+  normalize_filenames: true
+  hash_algorithm: "md5"
+  min_image_size: [32, 32]  # Minimum valid image dimensions
+
+# Balancing Settings
+balancing:
+  strategy: "ensemble_aware"  # ensemble_aware, standard, none
+  minority_oversample_factor: 3.0  # Multiply minority class samples
+  majority_undersample_ratio: 0.7  # Keep 70% of majority class
+  apply_to_classes:
+    Theft: 3.0  # Oversample theft 3x
+    Shopping-Cart: 2.5  # Oversample shopping-cart 2.5x
+    Normal: 0.5  # Undersample normal to 50%
+
+# Preprocessing Settings
+preprocessing:
+  target_size: [640, 640]  # YOLOv8 standard
+  maintain_aspect_ratio: true
+  letterbox_padding: true
+  padding_color: [114, 114, 114]  # Gray padding
+  normalize_pixels: true  # Scale to [0, 1]
+  auto_orient: true
+  format: "jpg"  # Output format
+  quality: 95  # JPEG quality
+
+# Augmentation Settings (Training Only)
+augmentation:
+  enabled: true
+  apply_to_split: ["train"]  # Only augment training data
+
+  # Retail-safe augmentations
+  transforms:
+    horizontal_flip:
+      enabled: true
+      probability: 0.5
+
+    brightness_contrast:
+      enabled: true
+      brightness_limit: 0.2
+      contrast_limit: 0.2
+      probability: 0.7
+
+    motion_blur:
+      enabled: true
+      blur_limit: [3, 7]
+      probability: 0.3
+
+    gaussian_noise:
+      enabled: true
+      var_limit: [10, 50]
+      probability: 0.3
+
+    random_scale:
+      enabled: true
+      scale_limit: 0.2
+      probability: 0.5
+
+    color_jitter:
+      enabled: true
+      hue_shift_limit: 10
+      sat_shift_limit: 20
+      val_shift_limit: 20
+      probability: 0.4
+
+    mosaic:
+      enabled: true
+      probability: 0.3
+      mosaic_size: 4  # 4-image mosaic
+
+    # Disabled unsafe augmentations
+    vertical_flip:
+      enabled: false
+    rotation:
+      enabled: false
+    perspective:
+      enabled: false
+
+# Dataset Splitting
+splitting:
+  train_ratio: 0.7
+  val_ratio: 0.2
+  test_ratio: 0.1
+  stratified: true
+  shuffle: true
+  random_seed: 42
+
+# YOLO Training Configuration
+yolo_training:
+  models:
+    - name: "yolov8n"
+      pretrained: "yolov8n.pt"
+      enabled: true
+    - name: "yolov8s"
+      pretrained: "yolov8s.pt"
+      enabled: true
+    - name: "yolov8m"
+      pretrained: "yolov8m.pt"
+      enabled: false  # Enable if GPU available
+
+  # Training hyperparameters (conservative for CPU/low-GPU)
+  hyperparameters:
+    epochs: 100
+    batch_size: 16  # Adjust based on hardware
+    imgsz: 640
+    workers: 4
+    cache: "ram"  # "ram", "disk", or false
+    optimizer: "AdamW"
+    lr0: 0.001  # Initial learning rate
+    lrf: 0.01  # Final learning rate fraction
+    momentum: 0.937
+    weight_decay: 0.0005
+    warmup_epochs: 3
+    patience: 20  # Early stopping patience
+
+    # Loss weights for imbalanced data
+    cls_loss_weight: 0.5
+    box_loss_weight: 7.5
+    dfl_loss_weight: 1.5
+
+    # Augmentation during training (YOLOv8 built-in)
+    augment: true
+    hsv_h: 0.015
+    hsv_s: 0.7
+    hsv_v: 0.4
+    degrees: 0.0  # No rotation for retail
+    translate: 0.1
+    scale: 0.5
+    shear: 0.0
+    perspective: 0.0
+    flipud: 0.0  # No vertical flip
+    fliplr: 0.5  # Horizontal flip
+    mosaic: 0.3
+    mixup: 0.1
+
+# Ensemble Configuration
+ensemble:
+  strategy: "weighted_box_fusion"  # wbf, soft_nms, nms
+
+  wbf_config:
+    iou_threshold: 0.5
+    skip_box_threshold: 0.01
+    conf_type: "avg"  # avg, max, weighted_avg
+
+    # Model weights (prioritize larger models)
+    model_weights:
+      yolov8n: 0.3
+      yolov8s: 0.4
+      yolov8m: 0.3
+
+  # Theft detection prioritization
+  class_weights:
+    Theft: 1.5  # Boost theft detection confidence
+    Shopping-Cart: 1.2
+    Customer-Bagpack: 1.0
+    Product-Picked: 1.0
+    Product: 1.0
+    Normal: 0.8  # Reduce normal detection weight
+
+  # Confidence thresholds
+  conf_threshold: 0.25  # Lower for high recall
+  iou_threshold: 0.45
+
+  # Theft-specific tuning
+  theft_recall_mode: true
+  theft_conf_threshold: 0.15  # Lower threshold for theft class
+
+# Visualization Settings
+visualization:
+  enabled: true
+  save_path: "outputs/visualizations"
+
+  plots:
+    - "class_distribution"
+    - "bbox_statistics"
+    - "image_resolution"
+    - "sample_grid"
+    - "augmentation_preview"
+    - "split_statistics"
+    - "annotation_quality"
+
+  sample_grid_size: [4, 4]  # 4x4 grid of sample images
+  augmentation_samples: 8
+  dpi: 150
+  figsize: [12, 8]
+
+# Logging Settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  log_file: "outputs/logs/pipeline.log"
+  console_output: true
+  save_reports: true
+  report_format: ["txt", "json"]
+
+# Performance Optimization
+optimization:
+  use_multiprocessing: true
+  num_workers: 4
+  prefetch_factor: 2
+  pin_memory: true
+  mixed_precision: true  # FP16 training if supported
+  compile_model: false  # torch.compile (requires PyTorch 2.0+)
+
+# Output Paths
+paths:
+  cleaned_dataset: "data/cleaned"
+  processed_dataset: "data/processed"
+  train_ready: "data/train_ready"
+  logs: "outputs/logs"
+  visualizations: "outputs/visualizations"
+  reports: "outputs/reports"
+  models: "outputs/models"
+  predictions: "outputs/predictions"
