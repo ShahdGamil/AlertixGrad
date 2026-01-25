@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(dir:*)",
+      "Bash(mongod:*)",
+      "Bash(venvScriptsactivate)",
+      "Bash(pip install:*)",
+      "Bash(\"venv/Scripts/pip.exe\" install --upgrade pip)",
+      "Bash(npm run dev:*)"
+    ]
+  }
+}

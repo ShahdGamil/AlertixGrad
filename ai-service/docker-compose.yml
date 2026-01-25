@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  ai-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: instaguard-ai-service
+    ports:
+      - "5001:5001"
+    volumes:
+      # Mount model weights
+      - ../backend/models:/app/models:ro
+      # Mount app code (for development)
+      - ./app:/app/app
+      # Mount logs directory
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    environment:
+      - DEVICE=cpu
+      - LOG_LEVEL=INFO
+      # Ensemble configuration (override if needed)
+      - ENSEMBLE_IOU_THRESHOLD=0.55
+      - ENSEMBLE_SKIP_BOX_THRESHOLD=0.25
+      - ENSEMBLE_WEIGHTS=[1.0,0.3,1.0]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+networks:
+  default:
+    name: instaguard-network
