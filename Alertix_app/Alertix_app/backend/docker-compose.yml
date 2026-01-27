@@ -1,0 +1,39 @@
+# Docker Compose for Alertix YOLO Theft Detection API
+# =====================================================
+# Easy deployment with Docker Compose
+#
+# Usage:
+#   Start: docker-compose up -d
+#   Stop:  docker-compose down
+#   Logs:  docker-compose logs -f
+#
+# =====================================================
+
+version: '3.8'
+
+services:
+  alertix-api:
+    build: .
+    container_name: alertix-yolo-api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount model file (update path as needed)
+      - ./Final_Copy_of_YOLO_Ensemble_Colab_Full_(3)_final.pt:/app/Final_Copy_of_YOLO_Ensemble_Colab_Full_(3)_final.pt
+      # Mount config file for easy updates
+      - ./config.py:/app/config.py
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - alertix-network
+
+networks:
+  alertix-network:
+    driver: bridge
