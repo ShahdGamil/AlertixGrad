@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![Alertix Logo](docs/logo.png) <!-- Add your logo here -->
-
 **Smart Surveillance System for Real-Time Theft Prevention**
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
