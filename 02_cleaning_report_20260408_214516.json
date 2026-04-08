@@ -1,0 +1,47 @@
+{
+  "timestamp": "20260408_214516",
+  "images_before": 10835,
+  "duplicates_removed": 0,
+  "images_after": 10835,
+  "annotation_lines_removed": 802,
+  "split_stats": {
+    "train": {
+      "copied": 8569,
+      "annotation_lines_removed": 797,
+      "class_counts": {
+        "4": 9449,
+        "5": 3990,
+        "2": 1051,
+        "1": 1235,
+        "0": 780,
+        "3": 212
+      }
+    },
+    "valid": {
+      "copied": 1526,
+      "annotation_lines_removed": 1,
+      "class_counts": {
+        "4": 742,
+        "5": 1009
+      }
+    },
+    "test": {
+      "copied": 740,
+      "annotation_lines_removed": 4,
+      "class_counts": {
+        "4": 686,
+        "5": 386
+      }
+    }
+  },
+  "duplicates": [],
+  "global_class_counts_after": {
+    "4": 10877,
+    "5": 5385,
+    "2": 1051,
+    "1": 1235,
+    "0": 780,
+    "3": 212
+  },
+  "output_dir": "C:\\Users\\shaho\\OneDrive\\Desktop\\grad\\dataset_cleaned"
+}

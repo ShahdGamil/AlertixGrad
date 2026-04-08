@@ -1,0 +1,1941 @@
+{
+  "timestamp": "20260408_213841",
+  "dataset": "C:\\Users\\shaho\\OneDrive\\Desktop\\grad\\DATA_AFTER MERGED",
+  "classes": [
+    "Customer-Bagpack",
+    "Product",
+    "Product-Picked",
+    "Shopping-Cart",
+    "normal",
+    "theft"
+  ],
+  "summary": {
+    "total_images": 10835,
+    "corrupt": 0,
+    "missing_labels": 0,
+    "empty_labels": 191,
+    "invalid_annotations": 108,
+    "valid_pairs": 10835
+  },
+  "split_stats": {
+    "train": {
+      "total": 8569,
+      "corrupt": 0,
+      "missing_label": 0,
+      "empty_label": 185,
+      "invalid_ann": 103,
+      "valid": 8569,
+      "total_annotations": 16717,
+      "class_counts": {
+        "4": 9449,
+        "5": 3990,
+        "2": 1051,
+        "1": 1235,
+        "0": 780,
+        "3": 212
+      }
+    },
+    "valid": {
+      "total": 1526,
+      "corrupt": 0,
+      "missing_label": 0,
+      "empty_label": 4,
+      "invalid_ann": 1,
+      "valid": 1526,
+      "total_annotations": 1751,
+      "class_counts": {
+        "4": 742,
+        "5": 1009
+      }
+    },
+    "test": {
+      "total": 740,
+      "corrupt": 0,
+      "missing_label": 0,
+      "empty_label": 2,
+      "invalid_ann": 4,
+      "valid": 740,
+      "total_annotations": 1072,
+      "class_counts": {
+        "4": 686,
+        "5": 386
+      }
+    }
+  },
+  "global_class_counts": {
+    "4": 10877,
+    "5": 5385,
+    "2": 1051,
+    "1": 1235,
+    "0": 780,
+    "3": 212
+  },
+  "issues": {
+    "corrupt_images": [],
+    "missing_labels": [],
+    "empty_labels": [
+      {
+        "split": "train",
+        "file": "1_mp4-14_jpg.rf.23c9a2aa0e34d5fdcab3c5d03297a7ff.jpg"
+      },
+      {
+        "split": "train",
+        "file": "1_mp4-14_jpg.rf.4d79b268a9e128b4ef0d4047d9dd3f7a.jpg"
+      },
+      {
+        "split": "train",
+        "file": "1_mp4-14_jpg.rf.fa12964362256d7a1b7e0f42c0763cdc.jpg"
+      },
+      {
+        "split": "train",
+        "file": "fshoplifting_2_11_534_jpg.rf.d2d00b3614c53e07ebac1c628cf7e375.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_0_29_png.rf.018fff96831dc0663629cca8fe01005e.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_0_58_png.rf.5ee55510eb4caf5b0f03d0aeef2b003c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_0_87_png.rf.7b54b970c35f08f51e0ad4aba85871e6.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_10_29_png.rf.7264bd1af75e2f36e883c3c2058cbe47.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_10_58_png.rf.24871e46ba1c8ef82f334d93e67f11a2.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_10_87_png.rf.ed4aecf3131599f99ebb5a798ce06e92.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_11_29_png.rf.a89a09e0c03165f7bcf90b612d699858.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_11_58_png.rf.69bcddafe193886d189edcf7b98cc855.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_11_87_png.rf.7619ba6d360c15f5c6fe16feea432581.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_12_29_png.rf.04345f70579903509598229350753a6f.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_12_58_png.rf.b18a8c0cb6c8cf9c48f982591dfc914c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_12_87_png.rf.b3964f32c39313b6dff2048f9df4f979.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_13_29_png.rf.7bbfbeff5bbf32adc54632c47937b939.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_13_58_png.rf.2b3a80d728bb6125e34d8011f51afee5.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_13_87_png.rf.d31ef98fc08cf7de60530148d0932de6.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_14_29_png.rf.4713840c3356a90c876d22a1bc644fd2.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_14_58_png.rf.1a470198a180bb86df31b20bcc9c6cec.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_14_87_png.rf.3aa27c26943418be7ab622cf638cc68b.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_15_29_png.rf.afd4e2816c9e222be957bdf723680b05.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_15_58_png.rf.b324f08c660edd31707df9feec4bcf7c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_15_87_png.rf.927162ce4db6e66212ab04f727f7d70d.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_16_29_png.rf.a9280bbc081ad9c84762f4d28bbcd18e.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_16_58_png.rf.7c5c0737ad7817b028ebf228b41986eb.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_16_87_png.rf.2bb6c2dc00d281f23df3968ea05d031a.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_17_29_png.rf.78e5c815640582a5a6715aceabcdefcb.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_17_58_png.rf.ada310bf5923e00431ba86d0b4bcf565.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_17_87_png.rf.d0cedb650aed053ff63e9e2f28545938.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_18_29_png.rf.3500aee48426c0d3199b860907711068.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_18_58_png.rf.8d662bca4643351fb25428c7a4346686.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_18_87_png.rf.6e9dd72722d9d8a13444bf02dbd697e3.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_19_29_png.rf.08c3949dbf5299ab39788860466ad137.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_19_58_png.rf.effab2f4d2b866433452422e0cbbd0bf.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_19_87_png.rf.0d69ce552d48d420989fec8db354cac4.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_1_29_png.rf.ba982b77530d29e5ad3c949cc22e8834.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_1_58_png.rf.f8a37d1b9cc8b1e8ac980f38d30da15c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_1_87_png.rf.7f4dfb9837c36ac8a57e387c3ad2f571.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_20_29_png.rf.7a070a835696cc617f352c1c2239372f.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_20_58_png.rf.2eba441e03361ddfe04751207f0c682a.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_20_87_png.rf.28c867d671ef85ed9c55da65a3dc8c3b.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_21_29_png.rf.0e72d3b5421ddc394de7f362b5175db3.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_21_58_png.rf.2cb91b16360b916941abce10ad165677.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_21_87_png.rf.dae2d92ac493401863c4a42b5e7eb4f2.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_22_29_png.rf.af94364207cae821f5d5cde2b0bc53a4.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_22_58_png.rf.c66e484fa026b75b53379d7f841c8624.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_22_87_png.rf.92d658534e57d508b1dcaa1bff379dc2.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_23_29_png.rf.96cb0b7df3fd77176d9bcaabb4b2caf0.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_23_58_png.rf.18f1dc2b4b755b0bc445891737114801.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_23_87_png.rf.5d5d7a7a3bd83edddc93c02aa1082a95.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_24_29_png.rf.21b9869e305401e6078f7c8263a177d9.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_24_58_png.rf.f28f65fb2301051723e02847ee9a2c32.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_24_87_png.rf.1b490f3312b70b91d066e46e1838172b.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_25_29_png.rf.83cce3366c9e7c637ffc529dd9ce3c85.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_25_58_png.rf.531f026ca489194a882edc7366cdaa5a.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_25_87_png.rf.c7fb9fae8f87bbda4a119f3fdf613d55.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_26_29_png.rf.df9cdef46aa4f59cbb539661033cdf75.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_26_58_png.rf.3f1fbf767896fa08dc0268cb7eef7bc9.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_26_87_png.rf.de0a57f87a5c5d89ecfe29fefa71f6be.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_27_29_png.rf.5c21641bb7501a80be8c4c5f0936a16e.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_27_58_png.rf.6a84452da881fde187fa20d655018c53.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_27_87_png.rf.6fbe8c72f5df3472c923580e90af80bf.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_28_29_png.rf.61def215037b708acacfc37b48b74a79.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_28_58_png.rf.218b321f2771c0db49341184a4a97c3b.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_28_87_png.rf.8fc32613cbea89dda371b54d2773dd8e.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_29_29_png.rf.d60bd85144d9142e653be43fe69531b6.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_29_58_png.rf.1033d7008f5c8217d11c031b0ad867a0.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_29_87_png.rf.ed124f1f479e478dc9ef6290c70caca8.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_2_29_png.rf.07801da73ce19f78f3f7c4a4881d408f.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_2_58_png.rf.9eb2ed704d024ccd79ba95f14ba0a989.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_2_87_png.rf.fee766b3ac81bd8bdf1f209dbbdc0747.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_30_29_png.rf.cc7b8f33474d0a79d11c3fb67955fb8d.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_30_58_png.rf.d01c383307d0b00ddd9ecd4203692097.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_30_87_png.rf.008b408063bc9588aedd4476852374b9.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_31_29_png.rf.e91c56dc744d131d9da5886b9805f8e6.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_31_58_png.rf.065fdaba80ec947309e7dd2a51be82ee.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_31_87_png.rf.bf34515ea711c0ab7d4141727a22cd95.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_3_29_png.rf.ea9298154b00195b98f068239fcc51e7.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_3_58_png.rf.d8b7c093baa2f06c15c87f190dcca4f9.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_3_87_png.rf.e404150045d824d7ba742689e4ed425c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_4_29_png.rf.4194e1293b465e87919f96e0cc63e044.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_4_58_png.rf.a8d84bbf9b4209479ecb19525f50ec9e.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_4_87_png.rf.7276667ad8083de8536eaf5d67fdb74e.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_5_29_png.rf.7f197fe00574bbc81452d7d3dcf72f6c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_5_58_png.rf.ccb1e3cd8e3e0ffdc3901511034c490d.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_5_87_png.rf.deb421abbfc16fff354c9378c52e5d9d.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_6_29_png.rf.5b6e591bfb6e32fbed13d31ec49f3c0b.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_6_58_png.rf.41d222dab9625d9afd9c3a766867e034.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_6_87_png.rf.d2fa6b096a8edb53688c27a851afe16e.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_7_29_png.rf.9ec910589cc4a5495f29ba8f2c050581.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_7_58_png.rf.5dff746dfa0422890fb144afdd4265c0.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_7_87_png.rf.8dec7b1a95d8ff9f20f34aa7664d1e19.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_8_29_png.rf.b39b2054b45cbf86d427e1e3ef1c6bff.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_8_58_png.rf.1a9918c311b4352115c321f83baa6538.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_8_87_png.rf.6637d615e39c0acbca91937935c1dc90.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_9_29_png.rf.671c9745c9dd4049520e3b218dcf3a09.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_9_58_png.rf.8518bba4b60b92f8b39f19fef0c59d04.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery010_x264_9_87_png.rf.ed7bc1682495bb7b7793b31aae9bbe7c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_0_87_png.rf.225b7a4639c74dc3170683ae4532367c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_12_29_png.rf.730a0a08c9dfa785335146389e5f6bfb.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_5_58_png.rf.108c5403317a708a5f28f8e83c48605e.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_5_87_png.rf.4062665a9a5e0375c963306a8ce93604.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_6_29_png.rf.2f8144efe1eb9c728da1e117c2b59283.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_0_29_png.rf.06b2f9d4cbddfe0feb4d05f8ec90ffd7.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_0_58_png.rf.9cc6715e716db768755a54b8c584eb9a.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_10_29_png.rf.070b581e1083ea4d9a366dac28f329c2.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_10_58_png.rf.d91795f64623ea4ac2865eeb6ed8a34f.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_11_29_png.rf.1e97fe39a6731888543b8eef686fec58.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_11_58_png.rf.24bac62511cd3cdb97f3eaa2b63758d5.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_12_29_png.rf.c6af0e59fe9a3d71a5691719fd5ae321.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_12_58_png.rf.cc9771c03bd09a1026cfb8071d1b6cc9.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_13_29_png.rf.0ff0be1cbef5ae71364ff8be3efa36b2.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_13_58_png.rf.603ef68a6bb409263b062bd3091d42d7.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_14_29_png.rf.bc5172610a97c967d17704d60a079cfe.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_14_58_png.rf.bcb2190ba6fff0e73755f1fd00124aac.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_15_29_png.rf.3961e479a4e38091e4b7af955cbc36cd.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_15_58_png.rf.7115fa8831b1308ba6f26b24e534f8f0.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_16_29_png.rf.d6dc85053c9de761d0a59c0cbadf7a34.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_16_58_png.rf.91f5edee7cc71867aefa7905b4616ce6.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_17_29_png.rf.238eaa71ba7ea626caf31ce39cb0ea0e.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_17_58_png.rf.96566b7fd35a91355f34e72b772f1888.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_18_29_png.rf.16dc262d9282eafc7c7103e364637d4d.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_18_58_png.rf.8abff3372ddb0bd214cdbbfb8c01dab1.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_19_29_png.rf.2485a032ca9f20c26411e1682c6a18d5.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_19_58_png.rf.6f6d9c5618a8a4e67663df08cf5373fb.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_1_29_png.rf.a8e76a33d73c6d2a90aee8f7fd990d58.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_1_58_png.rf.4ecb7bacb6fbe32fa956bea12fa9c69d.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_20_29_png.rf.c513f7a5966538631fd1f866099d847f.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_20_58_png.rf.89e27cd18a607dcf654201f1bc43989b.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_21_29_png.rf.07617c6c7e6dfbcc640850fb9b018da5.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_21_58_png.rf.3fee806eb2a19cdab0930e2d41f9577a.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_22_29_png.rf.6c5d7609e4e5db3db7ab2e8da5ccaa70.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_22_58_png.rf.03da540b6e9ad2fb2da3a511451427db.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_23_29_png.rf.f0b038ab3b62dfec938c2741093fab3b.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_23_58_png.rf.0592ea66f7d4c499815db3e6f2c4c0a1.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_24_29_png.rf.26bb50891adb95ccec3e764cbb7bcf6b.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_24_58_png.rf.85259895efc926febf1436aaf4351b38.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_25_29_png.rf.28612b0f1e6fd33e27940f1abe038aa9.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_25_58_png.rf.adb39c24a1b12145d17598b0d91d2be8.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_26_29_png.rf.9572e7d45049d6939bbdb7ea883d430a.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_26_58_png.rf.5a3f0ca65b79ef972878d878ad87449e.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_27_29_png.rf.ef1943cb5c98fdbd3b5d3feeb3a4b25c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_27_58_png.rf.1094d8cad325e4eb11b52965d1a9a22b.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_28_29_png.rf.23b004c8f593ef5fed1f32bd75cdb12c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_28_58_png.rf.e38bbe7496ada1ef665f6a26f4f9ff9c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_29_29_png.rf.ad738a5a0ca64e14e317e3b420729aee.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_29_58_png.rf.658ea501deaf239c4ff0e82cc78b697a.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_2_29_png.rf.b20cbe8e12ea7678e7bd0c2148cd46b7.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_2_58_png.rf.56e0d1b4235310e70bd78596304daebb.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_30_29_png.rf.97bc778a846b122ba7c38d1616f33548.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_30_58_png.rf.c0fecfe658ccf86d563d29dbe3c328a1.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_31_29_png.rf.1b1e9e0203888b96a6d82bb32f835d09.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_31_58_png.rf.938c4210a21944015b246e69fdf04baf.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_3_29_png.rf.f0fbcbd29b35fdb38471a7d05c622c1c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_3_58_png.rf.7a7716228192876da91435b437fce126.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_4_29_png.rf.e854551205b6ae65fba54f7995a21341.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_4_58_png.rf.edf8d9cd235fb234c50ab718701c9548.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_5_29_png.rf.3382af868e13f43b002ce0912aae03fb.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_5_58_png.rf.1c4982a6e060c8ba3cfade4e3579fe4f.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_6_29_png.rf.a5e22202614c4b26b75f33f85c5b23b3.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_6_58_png.rf.760f69b627586248d213fd4f06d20343.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_7_29_png.rf.8b1212d842e2a82f5b3419f8deb7dfa1.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_7_58_png.rf.9894241bdc00ff857c03a0776b2229c8.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_8_29_png.rf.19497f497191e4af3f998a83f15c4482.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_8_58_png.rf.96d69d66610ebc6608d5f4fb84c8ced1.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_9_29_png.rf.f75f912dc030fa085b71888b036936d4.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery015_x264_9_58_png.rf.9d9e0dcba10a7509fd5ca4b5453baf62.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery016_x264_0_29_png.rf.b996791cdbcf3aa1bda63931dcce3b62.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery016_x264_12_29_png.rf.3290270a60037e5c5c9fae8397785655.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery016_x264_14_29_png.rf.1b4aba672797aceebd98d4a2276c3777.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery016_x264_15_29_png.rf.b09ce148154c670b3d4e7ef40aba5766.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Robbery016_x264_16_29_png.rf.fe559f74da1a20774019ea9d9f624684.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Rubano-prodotti-per-3-mila-euro-denunciate-quattro-professioniste-del-taccheggio_out0101_jpg.rf.5f8fa3b24ed39bbde33964640afcc3d8.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_14_mp4-1_jpg.rf.064710c8ab7d62f75e73ec93d859e50e.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_14_mp4-1_jpg.rf.4082f7ca5f863c27363ca91e7296b2ff.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_14_mp4-1_jpg.rf.75672b8c86e35aba6c9f553ae50a65b8.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_27_mp4-2_jpg.rf.20140d58119be63c581127cd7e78fdb2.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_28_mp4-4_jpg.rf.64c88f8d9de018707248df6da1001140.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting048_x264_2_mp4-14_jpg.rf.0e63502525178fbb5ff8771dc1154af6.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting048_x264_2_mp4-17_jpg.rf.289ff140194a0c81a75f95fccf032f5c.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting048_x264_2_mp4-17_jpg.rf.685012a62aecd4e4df7a193c8eebcfda.jpg"
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting048_x264_2_mp4-17_jpg.rf.80282104431c6c3f9ee44944c8d86076.jpg"
+      },
+      {
+        "split": "train",
+        "file": "theft-one_f9eOrrnP_mp4-479_jpg.rf.7666d808229d99d72cfbf375e60c8686.jpg"
+      },
+      {
+        "split": "valid",
+        "file": "Rubano-prodotti-per-3-mila-euro-denunciate-quattro-professioniste-del-taccheggio_out0079_jpg.rf.136a9dd17dbb853a860c327666407731.jpg"
+      },
+      {
+        "split": "valid",
+        "file": "Shoplifting001_x264_29_mp4-3_jpg.rf.d2fcccb4ebd7e1814c20976de1a76e92.jpg"
+      },
+      {
+        "split": "valid",
+        "file": "Shoplifting007_x264_31_mp4-2_jpg.rf.3b626951b1ae5192672890726765a9e8.jpg"
+      },
+      {
+        "split": "valid",
+        "file": "Shoplifting048_x264_2_mp4-14_jpg.rf.a78df1822615fbc97c6ee97a6e88c1b7.jpg"
+      },
+      {
+        "split": "test",
+        "file": "Shoplifting001_x264_28_mp4-1_jpg.rf.d2b9e031b88e5be95899189997a2c4e9.jpg"
+      },
+      {
+        "split": "test",
+        "file": "Shoplifting009_x264_13_mp4-3_jpg.rf.afa45253aecfab515a5f6b7cf9e35ebd.jpg"
+      }
+    ],
+    "invalid_annotations": [
+      {
+        "split": "train",
+        "file": "aahil_4_mp4-59_jpg.rf.55611ca3bc1a47a5c6505c127287f6e9.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 307"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_0_29_png.rf.0ebd7b264c6dfef772dafc7323c8e9b8.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 21",
+          "L2: expected 5 fields, got 17",
+          "L3: expected 5 fields, got 53",
+          "L4: expected 5 fields, got 31",
+          "L6: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_0_58_png.rf.c51bf911abb9ee06051ca847fadd06c2.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 55",
+          "L3: expected 5 fields, got 27"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_10_29_png.rf.bea47502cfdeab2fbc5edd9a934cc45e.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 27",
+          "L3: expected 5 fields, got 25",
+          "L4: expected 5 fields, got 23",
+          "L5: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_10_58_png.rf.eef2d837ef6a323856fa09f685768039.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 23",
+          "L2: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 27",
+          "L5: expected 5 fields, got 25",
+          "L6: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_10_87_png.rf.405d34e18176739548de9ef352b8ca86.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 33",
+          "L2: expected 5 fields, got 25",
+          "L3: expected 5 fields, got 33",
+          "L7: expected 5 fields, got 21",
+          "L8: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_11_29_png.rf.b9ca6233aa7a323670ef0d98cc8422ca.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 23",
+          "L3: expected 5 fields, got 23",
+          "L6: expected 5 fields, got 35",
+          "L7: expected 5 fields, got 17"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_11_58_png.rf.40bf049c34258d5297dfe579e523d68f.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 23",
+          "L2: expected 5 fields, got 25",
+          "L3: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 25",
+          "L5: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_11_87_png.rf.76bde6ad70cd5b7000727ee72e330b5d.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 17",
+          "L3: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_12_58_png.rf.1cda1534504964110bddad8b5a338805.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_12_87_png.rf.a538f8c3845986779dcd328bed996be3.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 27",
+          "L3: expected 5 fields, got 29",
+          "L4: expected 5 fields, got 17",
+          "L5: expected 5 fields, got 29"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_13_29_png.rf.0971a0ee1930302aed1635f0571fe24d.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 21",
+          "L2: expected 5 fields, got 23",
+          "L3: expected 5 fields, got 31",
+          "L4: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_13_58_png.rf.4580d02c63828304bdc2e74997cadf68.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 29",
+          "L2: expected 5 fields, got 29",
+          "L4: expected 5 fields, got 25",
+          "L5: expected 5 fields, got 29",
+          "L6: expected 5 fields, got 31"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_13_87_png.rf.b0020ac6cafb14e877f563b89ef50947.jpg",
+        "errors": [
+          "L3: expected 5 fields, got 27",
+          "L8: expected 5 fields, got 35",
+          "L9: expected 5 fields, got 29",
+          "L10: expected 5 fields, got 21",
+          "L11: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_14_29_png.rf.5ed9d416639745ce7ed7490ec2f186c1.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 21",
+          "L2: expected 5 fields, got 25",
+          "L3: expected 5 fields, got 57",
+          "L4: expected 5 fields, got 25",
+          "L5: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_14_58_png.rf.f31cd00d0475c2a4e2a4d8a4661762d9.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 21",
+          "L2: expected 5 fields, got 63",
+          "L3: expected 5 fields, got 17",
+          "L4: expected 5 fields, got 23",
+          "L6: expected 5 fields, got 17"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_14_87_png.rf.4774bda84d35a3ec3dc08cf19d2a5c03.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 19",
+          "L2: expected 5 fields, got 23",
+          "L3: expected 5 fields, got 51",
+          "L4: expected 5 fields, got 17",
+          "L5: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_15_29_png.rf.0a813ea8315efeaf0f937d8ab5a0dd99.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 27",
+          "L2: expected 5 fields, got 29",
+          "L3: expected 5 fields, got 47",
+          "L4: expected 5 fields, got 29",
+          "L5: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_15_58_png.rf.51c94212c84d00f3cd217d3112f1686a.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 27",
+          "L5: expected 5 fields, got 21",
+          "L7: expected 5 fields, got 31",
+          "L8: expected 5 fields, got 21",
+          "L9: expected 5 fields, got 27"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_15_87_png.rf.5bcc92cd72298fcecbdbc714af385413.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 23",
+          "L3: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 29",
+          "L5: expected 5 fields, got 53",
+          "L7: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_16_29_png.rf.e170308bdddd263b89b91d9b304605ae.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 25",
+          "L3: expected 5 fields, got 21",
+          "L5: expected 5 fields, got 23",
+          "L6: expected 5 fields, got 31",
+          "L7: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_16_58_png.rf.44b55de3a405dfc0895a2730cf16e595.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 33",
+          "L3: expected 5 fields, got 31",
+          "L4: expected 5 fields, got 21",
+          "L6: expected 5 fields, got 33",
+          "L7: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_16_87_png.rf.e7b7c3da4db9c1da1a38dd251e437ac9.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 29",
+          "L2: expected 5 fields, got 23",
+          "L3: expected 5 fields, got 25",
+          "L4: expected 5 fields, got 19",
+          "L6: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_17_29_png.rf.caf42b3df61c09663ead113595066040.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 29",
+          "L3: expected 5 fields, got 33",
+          "L4: expected 5 fields, got 45",
+          "L5: expected 5 fields, got 31",
+          "L6: expected 5 fields, got 29"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_17_58_png.rf.2dfdc8a92161a8ac593741676d19ee21.jpg",
+        "errors": [
+          "L5: expected 5 fields, got 23",
+          "L6: expected 5 fields, got 17",
+          "L7: expected 5 fields, got 19",
+          "L8: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_17_87_png.rf.31a46c3c3d8dbf6a420447897dfb8876.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 27",
+          "L4: expected 5 fields, got 49",
+          "L5: expected 5 fields, got 29",
+          "L6: expected 5 fields, got 25",
+          "L7: expected 5 fields, got 29"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_18_29_png.rf.c285c9d979f93008020147618dad48cf.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 37",
+          "L2: expected 5 fields, got 21",
+          "L4: expected 5 fields, got 19",
+          "L5: expected 5 fields, got 33",
+          "L8: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_18_58_png.rf.96a1090476efd14a82f343e69d3c786a.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 23",
+          "L2: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 35",
+          "L5: expected 5 fields, got 49",
+          "L6: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_18_87_png.rf.4d8f8bf49c049d314da36cac4c7fc9d6.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 23",
+          "L2: expected 5 fields, got 25",
+          "L3: expected 5 fields, got 33",
+          "L4: expected 5 fields, got 25",
+          "L5: expected 5 fields, got 39"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_19_29_png.rf.69d8f6f2a5f27b3bcfa6389435f9f642.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 23",
+          "L2: expected 5 fields, got 21",
+          "L3: expected 5 fields, got 29",
+          "L4: expected 5 fields, got 25",
+          "L5: expected 5 fields, got 29"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_19_58_png.rf.14ec962ab537c03f654bab105a815a52.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 29",
+          "L2: expected 5 fields, got 45",
+          "L3: expected 5 fields, got 27",
+          "L4: expected 5 fields, got 33",
+          "L5: expected 5 fields, got 45"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_19_87_png.rf.6e945ada86e7ad43a1ebaeb3909ce07a.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 29",
+          "L3: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 31",
+          "L6: expected 5 fields, got 27",
+          "L9: expected 5 fields, got 29"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_1_29_png.rf.8d6744b5b82ec76a3c1f303d62336597.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 57",
+          "L2: expected 5 fields, got 19",
+          "L3: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_1_58_png.rf.daac17ad3860417d30ec8460ce97f6ca.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 47",
+          "L2: expected 5 fields, got 31",
+          "L3: expected 5 fields, got 29"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_1_87_png.rf.bd5d09d4bff5f8cfff9d96ff3e5daaba.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 23",
+          "L2: expected 5 fields, got 55",
+          "L3: expected 5 fields, got 27"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_20_29_png.rf.1aef0296e567a636c1aa66fa5f9d49da.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 19",
+          "L2: expected 5 fields, got 29",
+          "L3: expected 5 fields, got 27",
+          "L4: expected 5 fields, got 27",
+          "L5: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_20_58_png.rf.5a18620a1954f5d8c44e26a46573193f.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 35",
+          "L3: expected 5 fields, got 21",
+          "L4: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_20_87_png.rf.fc61a20e33fcaeccb379483ca980ba5b.jpg",
+        "errors": [
+          "L3: expected 5 fields, got 21",
+          "L4: expected 5 fields, got 31",
+          "L5: expected 5 fields, got 27",
+          "L6: expected 5 fields, got 23",
+          "L7: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_21_29_png.rf.26dd9c954bc129333db1c71c5521ea29.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 21",
+          "L2: expected 5 fields, got 21",
+          "L3: expected 5 fields, got 21",
+          "L4: expected 5 fields, got 31",
+          "L5: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_21_58_png.rf.2f2d07b1468a08c965059d1551dcc808.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 19",
+          "L2: expected 5 fields, got 25",
+          "L3: expected 5 fields, got 27",
+          "L4: expected 5 fields, got 19",
+          "L5: expected 5 fields, got 27"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_21_87_png.rf.a6b4a0ebae263743b33f51ac3d36b427.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 33",
+          "L3: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 25",
+          "L6: expected 5 fields, got 27"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_22_29_png.rf.bd6f84189c912e6dd349fea4d51172aa.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 31",
+          "L2: expected 5 fields, got 25",
+          "L3: expected 5 fields, got 23",
+          "L5: expected 5 fields, got 17",
+          "L6: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_22_58_png.rf.4f0e2f2352c5e1ee72bfa0e269bca635.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 23",
+          "L2: expected 5 fields, got 25",
+          "L3: expected 5 fields, got 29",
+          "L4: expected 5 fields, got 25",
+          "L5: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_22_87_png.rf.f67f581dd21d7a31918ccfaf26da4a82.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 21",
+          "L2: expected 5 fields, got 19",
+          "L3: expected 5 fields, got 25",
+          "L4: expected 5 fields, got 25",
+          "L5: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_23_29_png.rf.ed243d21a1d2a0fa23437a1591dc4a3b.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 19",
+          "L2: expected 5 fields, got 33",
+          "L3: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 29",
+          "L5: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_23_58_png.rf.a60aaca0cae77ff4af32fd64af3d8d4f.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 27",
+          "L3: expected 5 fields, got 25",
+          "L5: expected 5 fields, got 19",
+          "L6: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_23_87_png.rf.84c502c81aea23f8d8124c4384cd7b72.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 27",
+          "L2: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 23",
+          "L5: expected 5 fields, got 23",
+          "L6: expected 5 fields, got 33"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_24_29_png.rf.4adf45d3bc04ca4d7838f4957b136ca0.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 19",
+          "L2: expected 5 fields, got 35",
+          "L5: expected 5 fields, got 27",
+          "L6: expected 5 fields, got 23",
+          "L8: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_24_58_png.rf.49000c4eda0e50b7241a1c7bcf483adf.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 19",
+          "L2: expected 5 fields, got 27",
+          "L4: expected 5 fields, got 23",
+          "L5: expected 5 fields, got 29",
+          "L6: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_24_87_png.rf.be3df6cf17ad626ba600561a614d7840.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 29",
+          "L2: expected 5 fields, got 21",
+          "L3: expected 5 fields, got 19",
+          "L4: expected 5 fields, got 21",
+          "L5: expected 5 fields, got 29"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_25_29_png.rf.30f57069c5a4076e1c333f0fe42e2096.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 29",
+          "L2: expected 5 fields, got 21",
+          "L3: expected 5 fields, got 27",
+          "L4: expected 5 fields, got 29",
+          "L5: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_25_58_png.rf.dc20a8121f199fe2b6e1c5250d54239c.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 27",
+          "L2: expected 5 fields, got 33",
+          "L3: expected 5 fields, got 29",
+          "L4: expected 5 fields, got 25",
+          "L5: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_25_87_png.rf.8bcc6ed2ccb808f38b5fb6c6b0f97670.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 33",
+          "L2: expected 5 fields, got 25",
+          "L5: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_26_29_png.rf.3eba81c0f2a83e4e64ae1263ec85e5ea.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 29",
+          "L3: expected 5 fields, got 19",
+          "L4: expected 5 fields, got 37",
+          "L5: expected 5 fields, got 23",
+          "L7: expected 5 fields, got 17"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_26_58_png.rf.1255b73dd561a03a842e96ee88943d37.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 33",
+          "L2: expected 5 fields, got 23",
+          "L3: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 29",
+          "L5: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_26_87_png.rf.421466aad5ff44aad2084752bf7650c9.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 33",
+          "L2: expected 5 fields, got 27",
+          "L3: expected 5 fields, got 29",
+          "L4: expected 5 fields, got 27",
+          "L5: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_27_29_png.rf.a6079586fb15537b5a291f4739fb3d44.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 39",
+          "L2: expected 5 fields, got 25",
+          "L3: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 23",
+          "L5: expected 5 fields, got 37"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_27_58_png.rf.7aac633b2ec6b03b4b45bf1b9a4503b5.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 33",
+          "L3: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 23",
+          "L5: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_27_87_png.rf.a745de46ff6fda1a49fa92151f04cdae.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 33",
+          "L2: expected 5 fields, got 25",
+          "L4: expected 5 fields, got 21",
+          "L5: expected 5 fields, got 29",
+          "L6: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_28_29_png.rf.aa246f7d188644865ad2ce300f2cbf91.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 19",
+          "L2: expected 5 fields, got 21",
+          "L3: expected 5 fields, got 29",
+          "L4: expected 5 fields, got 25",
+          "L5: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_28_58_png.rf.7bf554053647f06dbd1625c8b1eb7cbd.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 19",
+          "L2: expected 5 fields, got 19",
+          "L3: expected 5 fields, got 25",
+          "L4: expected 5 fields, got 21",
+          "L5: expected 5 fields, got 31"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_28_87_png.rf.58bf8c1b6e3cb8dea51912c16cdda7e6.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 47",
+          "L2: expected 5 fields, got 21",
+          "L3: expected 5 fields, got 19",
+          "L4: expected 5 fields, got 17",
+          "L5: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_29_29_png.rf.48415ddf979e4495eace6634fd7ef4f8.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 27",
+          "L5: expected 5 fields, got 21",
+          "L6: expected 5 fields, got 19",
+          "L7: expected 5 fields, got 35",
+          "L8: expected 5 fields, got 27"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_29_58_png.rf.779c700b5307103d2706cad676ec3e03.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 21",
+          "L4: expected 5 fields, got 29",
+          "L5: expected 5 fields, got 27",
+          "L6: expected 5 fields, got 27",
+          "L7: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_29_87_png.rf.94ab01c3f198aba7526637c8373bc543.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 21",
+          "L3: expected 5 fields, got 27",
+          "L4: expected 5 fields, got 27",
+          "L5: expected 5 fields, got 27",
+          "L6: expected 5 fields, got 27"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_2_29_png.rf.90e072a359e10b112506aa097612a7ce.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 29",
+          "L2: expected 5 fields, got 29",
+          "L3: expected 5 fields, got 21",
+          "L4: expected 5 fields, got 17",
+          "L5: expected 5 fields, got 27"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_2_58_png.rf.4841d420b92ad24b1e9e8552eaff4b4a.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 23",
+          "L3: expected 5 fields, got 31",
+          "L4: expected 5 fields, got 21",
+          "L5: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_2_87_png.rf.59685060c6317b9bfdc6c6291d48deb5.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 31",
+          "L2: expected 5 fields, got 21",
+          "L4: expected 5 fields, got 21",
+          "L5: expected 5 fields, got 29",
+          "L6: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_30_29_png.rf.6e1e624376ae7265149ed55fdc7339ed.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 21",
+          "L2: expected 5 fields, got 21",
+          "L3: expected 5 fields, got 27",
+          "L4: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_30_58_png.rf.b4605ab102132805dd6f9c05b631c1d4.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 31",
+          "L4: expected 5 fields, got 33",
+          "L5: expected 5 fields, got 21",
+          "L6: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_30_87_png.rf.112aeb8b2939215bbd527e405de9ee78.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 21",
+          "L2: expected 5 fields, got 21",
+          "L3: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 29",
+          "L5: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_31_29_png.rf.14c83756b427ed212025ca5e0831db9e.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 27",
+          "L3: expected 5 fields, got 19",
+          "L4: expected 5 fields, got 19",
+          "L5: expected 5 fields, got 25",
+          "L6: expected 5 fields, got 35"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_31_58_png.rf.ac8b3680b8c537fe95cf63f91da23698.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 19",
+          "L3: expected 5 fields, got 19",
+          "L4: expected 5 fields, got 17",
+          "L5: expected 5 fields, got 17",
+          "L6: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_31_87_png.rf.93af2396f5a27f57350989a828c79de8.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 23",
+          "L3: expected 5 fields, got 25",
+          "L4: expected 5 fields, got 19",
+          "L5: expected 5 fields, got 27",
+          "L6: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_3_29_png.rf.d0a0e6b7d12d9dd79e7f48b250213af0.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 21",
+          "L4: expected 5 fields, got 33",
+          "L5: expected 5 fields, got 19",
+          "L6: expected 5 fields, got 29",
+          "L7: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_3_58_png.rf.58f3ab21d8ff93a3acd87f5427b1a7a6.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 23",
+          "L2: expected 5 fields, got 27",
+          "L4: expected 5 fields, got 23",
+          "L7: expected 5 fields, got 27",
+          "L8: expected 5 fields, got 27"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_3_87_png.rf.913e543db75da65ad46dc1ecbf0db092.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 27",
+          "L3: expected 5 fields, got 21",
+          "L4: expected 5 fields, got 17",
+          "L5: expected 5 fields, got 27",
+          "L7: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_4_29_png.rf.1287f1316a3a25ba11f69b0e6ab561b2.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 27",
+          "L2: expected 5 fields, got 25",
+          "L3: expected 5 fields, got 25",
+          "L4: expected 5 fields, got 25",
+          "L7: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_4_58_png.rf.79e3326d6b49016b3de965eb290163a6.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 29",
+          "L3: expected 5 fields, got 27",
+          "L5: expected 5 fields, got 17",
+          "L6: expected 5 fields, got 25",
+          "L7: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_4_87_png.rf.7604b3bbf3d233b1fd837171161b6c32.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 21",
+          "L2: expected 5 fields, got 25",
+          "L3: expected 5 fields, got 29",
+          "L4: expected 5 fields, got 37",
+          "L6: expected 5 fields, got 31"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_5_29_png.rf.6ecfe18acf673e4139d817b20fdf6eb9.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 23",
+          "L2: expected 5 fields, got 23",
+          "L3: expected 5 fields, got 31",
+          "L4: expected 5 fields, got 63",
+          "L5: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_6_58_png.rf.3b111a488f54497aed31413bcae37b92.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 31",
+          "L2: expected 5 fields, got 33"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_6_87_png.rf.11290cdd60a3b5a04d39e1613117d7fd.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 27",
+          "L4: expected 5 fields, got 19",
+          "L5: expected 5 fields, got 19",
+          "L6: expected 5 fields, got 23"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_7_29_png.rf.193f6da94672734ad33919317887b853.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 23",
+          "L2: expected 5 fields, got 19",
+          "L3: expected 5 fields, got 25",
+          "L4: expected 5 fields, got 21",
+          "L5: expected 5 fields, got 31"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_7_58_png.rf.19b1dca59568e8068d6efd3d1940de7a.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 23",
+          "L2: expected 5 fields, got 25",
+          "L3: expected 5 fields, got 31",
+          "L5: expected 5 fields, got 27",
+          "L6: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_7_87_png.rf.4007951f55e9cc784cff11d68cd60b24.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 27",
+          "L3: expected 5 fields, got 25",
+          "L4: expected 5 fields, got 27",
+          "L5: expected 5 fields, got 29"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_8_29_png.rf.fa126a07a4feb4ce047f81b7be51fc83.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_8_58_png.rf.03370e83dcedbffad7442a3dac04412b.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 19",
+          "L2: expected 5 fields, got 29",
+          "L3: expected 5 fields, got 27",
+          "L4: expected 5 fields, got 21",
+          "L5: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_8_87_png.rf.b66468fc56282e6b4f5e1856e0c34377.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 27",
+          "L4: expected 5 fields, got 43",
+          "L5: expected 5 fields, got 25",
+          "L7: expected 5 fields, got 21",
+          "L8: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_9_29_png.rf.503639cc8b386bf093fe2fb77778afd4.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 21",
+          "L2: expected 5 fields, got 23",
+          "L3: expected 5 fields, got 25",
+          "L4: expected 5 fields, got 21",
+          "L5: expected 5 fields, got 51"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_9_58_png.rf.08ec90375b708d27cabcd097cb92800d.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 25",
+          "L2: expected 5 fields, got 23",
+          "L3: expected 5 fields, got 21",
+          "L4: expected 5 fields, got 27",
+          "L6: expected 5 fields, got 21"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery013_x264_9_87_png.rf.5b8f43eac36f7667f09142260144989f.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 19",
+          "L2: expected 5 fields, got 29",
+          "L3: expected 5 fields, got 23",
+          "L4: expected 5 fields, got 21",
+          "L5: expected 5 fields, got 17"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery016_x264_10_29_png.rf.2de165cbd448235ce67fc71f783376bf.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 109",
+          "L2: expected 5 fields, got 85",
+          "L3: expected 5 fields, got 75"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery016_x264_11_29_png.rf.3cda3a7ce7ecc04ed363ab3f19c77d7e.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 103",
+          "L2: expected 5 fields, got 71"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Robbery016_x264_13_29_png.rf.7645076c9df1562f12728e5d3772e601.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 69"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_13_mp4-0_jpg.rf.549cd0e47bed39b6f33fdde1202d5fa2.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 11"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_13_mp4-0_jpg.rf.631d35ef23dca9a36b72404195568d28.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 15"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_13_mp4-0_jpg.rf.8bb0ce3845ab9de7511942124d601b78.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 17"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_13_mp4-1_jpg.rf.5e10d975f5e3d30cf71d6fee51210f5c.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_13_mp4-1_jpg.rf.a012de8f57124df89bc1607b4f45f60a.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_13_mp4-1_jpg.rf.dc6b78b1a9ae52a5efbcfaec8e581c4e.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 13"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_13_mp4-5_jpg.rf.3fefddca63cf6c57e9caf4f2e3b35280.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 17"
+        ]
+      },
+      {
+        "split": "train",
+        "file": "Shoplifting001_x264_13_mp4-5_jpg.rf.e2dea4cc25338600841293628ff42029.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 19"
+        ]
+      },
+      {
+        "split": "valid",
+        "file": "Shoplifting001_x264_13_mp4-5_jpg.rf.0313b734ef7e423ee541cfe51e35b1e0.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 13"
+        ]
+      },
+      {
+        "split": "test",
+        "file": "Shoplifting001_x264_13_mp4-10_jpg.rf.b6a1379a771eff664995bd40468c5f5f.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 13"
+        ]
+      },
+      {
+        "split": "test",
+        "file": "Shoplifting001_x264_13_mp4-13_jpg.rf.045de7338cb7e2da7c4d632727ed7335.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 13"
+        ]
+      },
+      {
+        "split": "test",
+        "file": "Shoplifting001_x264_13_mp4-4_jpg.rf.f45d65efd57f2a63cde0e3d60f175651.jpg",
+        "errors": [
+          "L2: expected 5 fields, got 13"
+        ]
+      },
+      {
+        "split": "test",
+        "file": "Shoplifting009_x264_13_mp4-4_jpg.rf.8358281a682c7c4f890ec75e66fcd85c.jpg",
+        "errors": [
+          "L1: expected 5 fields, got 33"
+        ]
+      }
+    ]
+  }
+}

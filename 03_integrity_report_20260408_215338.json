@@ -1,0 +1,93 @@
+{
+  "timestamp": "20260408_215338",
+  "dataset": "C:\\Users\\shaho\\OneDrive\\Desktop\\grad\\dataset_cleaned",
+  "classes": [
+    "Customer-Bagpack",
+    "Product",
+    "Product-Picked",
+    "Shopping-Cart",
+    "normal",
+    "theft"
+  ],
+  "orphan_images": 0,
+  "orphan_labels": 0,
+  "orphan_labels_deleted": 0,
+  "empty_labels": 213,
+  "high_annotation_images": 0,
+  "split_integrity": {
+    "train": {
+      "total_images": 8569,
+      "total_labels": 8569,
+      "matched": 8569,
+      "orphan_images": 0,
+      "orphan_labels": 0,
+      "empty_labels": 206,
+      "class_counts": {
+        "4": 9449,
+        "5": 3990,
+        "1": 1235,
+        "2": 1051,
+        "0": 780,
+        "3": 212
+      },
+      "avg_ann_per_img": 1.95086941300035
+    },
+    "valid": {
+      "total_images": 1526,
+      "total_labels": 1526,
+      "matched": 1526,
+      "orphan_images": 0,
+      "orphan_labels": 0,
+      "empty_labels": 4,
+      "class_counts": {
+        "4": 742,
+        "5": 1009
+      },
+      "avg_ann_per_img": 1.1474442988204456
+    },
+    "test": {
+      "total_images": 740,
+      "total_labels": 740,
+      "matched": 740,
+      "orphan_images": 0,
+      "orphan_labels": 0,
+      "empty_labels": 3,
+      "class_counts": {
+        "4": 686,
+        "5": 386
+      },
+      "avg_ann_per_img": 1.4486486486486487
+    }
+  },
+  "global_class_counts": {
+    "4": 10877,
+    "5": 5385,
+    "1": 1235,
+    "2": 1051,
+    "0": 780,
+    "3": 212
+  },
+  "bbox_statistics": {
+    "width": {
+      "mean": 0.24314427819856702,
+      "median": 0.203813,
+      "std": 0.16979845904649626
+    },
+    "height": {
+      "mean": 0.5127494659672466,
+      "median": 0.471582,
+      "std": 0.2632584682799112
+    },
+    "area": {
+      "mean": 0.14302423590256286,
+      "median": 0.110046589875,
+      "std": 0.14045648593399146
+    }
+  },
+  "per_image_ann_stats": {
+    "mean": 1.8034148592524226,
+    "max": 8,
+    "median": 1.0
+  },
+  "high_annotation_examples": []
+}

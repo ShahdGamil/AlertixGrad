@@ -1,0 +1,72 @@
+{
+  "timestamp": "20260408_221901",
+  "final_dataset_path": "C:\\Users\\shaho\\OneDrive\\Desktop\\grad\\dataset\\data.yaml",
+  "total_images": 26849,
+  "total_annotations": 59106,
+  "class_names": [
+    "Customer-Bagpack",
+    "Product",
+    "Product-Picked",
+    "Shopping-Cart",
+    "normal",
+    "theft"
+  ],
+  "global_class_counts": {
+    "4": 39224,
+    "5": 7503,
+    "2": 4204,
+    "1": 4379,
+    "0": 3116,
+    "3": 680
+  },
+  "split_counts": {
+    "train": {
+      "n_images": 24583,
+      "class_counts": {
+        "4": 37796,
+        "5": 6108,
+        "2": 4204,
+        "1": 4379,
+        "0": 3116,
+        "3": 680
+      }
+    },
+    "val": {
+      "n_images": 1526,
+      "class_counts": {
+        "4": 742,
+        "5": 1009
+      }
+    },
+    "test": {
+      "n_images": 740,
+      "class_counts": {
+        "4": 686,
+        "5": 386
+      }
+    }
+  },
+  "cleaning": {
+    "duplicates_removed": 0,
+    "orphan_labels_removed": 0
+  },
+  "imbalance_ratio": 57.68235294117647,
+  "risks": [
+    "Normal class dominates (\u224853% of annotations). Model may be biased toward predicting Normal.",
+    "Shopping-Cart is severely under-represented (~1%). Hard to learn reliable features with so few examples.",
+    "Customer-Bagpack (\u22484%) and Product-Picked (\u22485%) are low \u2014 will benefit from targeted augmentation.",
+    "Theft detection is the key objective but Theft accounts for only \u224826% of annotations. Recall may suffer.",
+    "Image diversity may be limited if footage comes from a small number of cameras / stores.",
+    "Background / negative images (empty labels) may mislead the detector if overrepresented in a split."
+  ],
+  "recommendations": [
+    "1.  Use weighted loss (--class-weights) in YOLOv8 to up-weight rare classes (especially Shopping-Cart and Customer-Bagpack).",
+    "2.  Over-sample Theft, Shopping-Cart, and Customer-Bagpack images using the augmentations in NB04 (already applied for minority classes).",
+    "3.  Consider mosaic augmentation (YOLOv8 default) to mix rare classes into more training crops.",
+    "4.  Monitor recall (not just mAP) for Theft class during training \u2014 use precision-recall curves per class.",
+    "5.  Collect more Shopping-Cart footage; 212 instances may not be sufficient for a production-quality detector.",
+    "6.  Apply mixup (--mixup 0.1) in YOLOv8 training config to help the model generalise from limited minority samples.",
+    "7.  Set a lower confidence threshold for Theft at inference (e.g. 0.35 instead of 0.5) to maximise recall in a surveillance scenario.",
+    "8.  Validate that Theft and Product-Picked are clearly distinguishable in your labelling \u2014 ambiguous cases between these two will hurt both classes."
+  ]
+}

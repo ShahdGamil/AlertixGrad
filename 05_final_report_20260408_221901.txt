@@ -1,0 +1,33 @@
+Retail Theft Detection — Dataset Report
+Generated: 2026-04-08 22:27:28
+========================================================================
+
+Final dataset  : C:\Users\shaho\OneDrive\Desktop\grad\dataset\data.yaml
+Total images   : 26,849
+Total annots.  : 59,106
+
+Class distribution:
+  Customer-Bagpack             3,116  (5.3%)
+  Product                      4,379  (7.4%)
+  Product-Picked               4,204  (7.1%)
+  Shopping-Cart                  680  (1.2%)
+  normal                      39,224  (66.4%)
+  theft                        7,503  (12.7%)
+
+Risks:
+  [HIGH] Normal class dominates (≈53% of annotations). Model may be biased toward predicting Normal.
+  [HIGH] Shopping-Cart is severely under-represented (~1%). Hard to learn reliable features with so few examples.
+  [MEDIUM] Customer-Bagpack (≈4%) and Product-Picked (≈5%) are low — will benefit from targeted augmentation.
+  [MEDIUM] Theft detection is the key objective but Theft accounts for only ≈26% of annotations. Recall may suffer.
+  [LOW] Image diversity may be limited if footage comes from a small number of cameras / stores.
+  [LOW] Background / negative images (empty labels) may mislead the detector if overrepresented in a split.
+
+Recommendations:
+  1.  Use weighted loss (--class-weights) in YOLOv8 to up-weight rare classes (especially Shopping-Cart and Customer-Bagpack).
+  2.  Over-sample Theft, Shopping-Cart, and Customer-Bagpack images using the augmentations in NB04 (already applied for minority classes).
+  3.  Consider mosaic augmentation (YOLOv8 default) to mix rare classes into more training crops.
+  4.  Monitor recall (not just mAP) for Theft class during training — use precision-recall curves per class.
+  5.  Collect more Shopping-Cart footage; 212 instances may not be sufficient for a production-quality detector.
+  6.  Apply mixup (--mixup 0.1) in YOLOv8 training config to help the model generalise from limited minority samples.
+  7.  Set a lower confidence threshold for Theft at inference (e.g. 0.35 instead of 0.5) to maximise recall in a surveillance scenario.
+  8.  Validate that Theft and Product-Picked are clearly distinguishable in your labelling — ambiguous cases between these two will hurt both classes.
